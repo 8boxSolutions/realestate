@@ -12,6 +12,16 @@ body {
   line-height: 1.5;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
 :root {
 	--background: #fffffe;
 	--foreground: #3f3e5e;
