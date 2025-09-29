@@ -1,3 +1,6 @@
+export {default as HouseAndLotCard} from "./card/HouseAndLot_Card";
+
+
 // shadcn/ui components
 export * from "./ui/accordion";
 export * from "./ui/alert-dialog";
