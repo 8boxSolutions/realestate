@@ -1,7 +1,15 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import {
+	Dialog,
+	DialogContent,
+	DialogHeader,
+	DialogTitle,
+	DialogTrigger,
+	DialogFooter,
+	DialogClose,
+} from '@/components/ui/dialog';
 import { Separator } from '@/components/ui/separator';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { features } from '@/constants/filter';
+import { Button } from '@/components/ui/button';
 import filterIcon from '@/assets/homepage/Vector.svg';
 import ForeclosedPropertySelect from './filters/ForeclosedPropertySelect';
 import FilterBathrooms from './filters/FilterBathrooms';
@@ -17,9 +25,9 @@ const BookFilter = () => {
 					</button>
 				</DialogTrigger>
 				<DialogContent>
-					<ScrollArea className="h-180 [&::-webkit-scrollbar]:hidden">
+					<div className="scrollbar-hide h-180 w-full overflow-y-auto">
 						<DialogHeader>
-							<DialogTitle className="text-black">Filter by:</DialogTitle>
+							<DialogTitle className="my-5 text-black">Filter by:</DialogTitle>
 						</DialogHeader>
 						<div>
 							<div className="flex flex-col space-y-2">
@@ -42,11 +50,22 @@ const BookFilter = () => {
 							<div>
 								<h1 className="text-[1.1rem] font-normal text-black">FEATURES</h1>
 								{features.map((feat, index) => (
-									<FilterFeatures key={index} feature={feat} />
+									<FilterFeatures key={index} feature={feat} showDivider={index !== features.length - 1} />
 								))}
 							</div>
+							<Separator className="my-5" />
 						</div>
-					</ScrollArea>
+						<DialogFooter>
+							<div className="flex w-full justify-center gap-10">
+								<DialogClose>
+									<Button variant="outline" className="border border-primary bg-primary/10 text-primary">
+										Cancel
+									</Button>
+								</DialogClose>
+								<Button>Apply</Button>
+							</div>
+						</DialogFooter>
+					</div>
 				</DialogContent>
 			</Dialog>
 		</div>
