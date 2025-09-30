@@ -1,5 +1,14 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
+const categories = [
+	{ value: 'all', label: 'All' },
+	{ value: 'apartment', label: 'Apartment' },
+	{ value: 'commercial space', label: 'Commercial Space' },
+	{ value: 'condominium', label: 'Condominium' },
+	{ value: 'house and lot', label: 'House and Lot' },
+	{ value: 'lot', label: 'Lot' },
+];
+
 const BookCategories = () => {
 	return (
 		<div>
@@ -8,12 +17,11 @@ const BookCategories = () => {
 					<SelectValue placeholder="Category" />
 				</SelectTrigger>
 				<SelectContent>
-					<SelectItem value="all">All</SelectItem>
-					<SelectItem value="apartment">Apartment</SelectItem>
-					<SelectItem value="commercial space">Commercial Space</SelectItem>
-					<SelectItem value="condominium">Condominium</SelectItem>
-					<SelectItem value="house and lot">House and Lot</SelectItem>
-					<SelectItem value="lot">Lot</SelectItem>
+					{categories.map((category) => (
+						<SelectItem key={category.value} value={category.value}>
+							{category.label}
+						</SelectItem>
+					))}
 				</SelectContent>
 			</Select>
 		</div>

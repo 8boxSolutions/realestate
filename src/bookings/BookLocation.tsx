@@ -1,5 +1,12 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
+const bookLocation = [
+	{ value: 'all', label: 'All' },
+	{ value: 'luzon', label: 'Luzon' },
+	{ value: 'visaya', label: 'Visaya' },
+	{ value: 'mindanao', label: 'Mindanao' },
+];
+
 const BookLocation = () => {
 	return (
 		<div>
@@ -8,10 +15,11 @@ const BookLocation = () => {
 					<SelectValue placeholder="Location" />
 				</SelectTrigger>
 				<SelectContent>
-					<SelectItem value="all">All</SelectItem>
-					<SelectItem value="luzon">Luzon</SelectItem>
-					<SelectItem value="visayas">Visayas</SelectItem>
-					<SelectItem value="mindanao">Mindanao</SelectItem>
+					{bookLocation.map((location) => (
+						<SelectItem key={location.value} value={location.value}>
+							{location.label}
+						</SelectItem>
+					))}
 				</SelectContent>
 			</Select>
 		</div>

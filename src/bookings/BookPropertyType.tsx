@@ -1,5 +1,10 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
+const propertyType = [
+	{ value: 'for sale', label: 'For Sale' },
+	{ value: 'for rent', label: 'For Rent' },
+];
+
 const BookPropertyType = () => {
 	return (
 		<div>
@@ -8,8 +13,11 @@ const BookPropertyType = () => {
 					<SelectValue placeholder="Property Type" />
 				</SelectTrigger>
 				<SelectContent>
-					<SelectItem value="for sale">For Sale</SelectItem>
-					<SelectItem value="for rent">For Rent</SelectItem>
+					{propertyType.map((type) => (
+						<SelectItem key={type.value} value={type.value}>
+							{type.label}
+						</SelectItem>
+					))}
 				</SelectContent>
 			</Select>
 		</div>
