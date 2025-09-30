@@ -14,7 +14,8 @@ import filterIcon from '@/assets/homepage/Vector.svg';
 import ForeclosedPropertySelect from './filters/ForeclosedPropertySelect';
 import FilterBathrooms from './filters/FilterBathrooms';
 import FilterArea from './filters/FilterArea';
-import FilterFeatures from './filters/filterFeatures';
+import FilterFeatures from './filters/FilterFeatures';
+
 const BookFilter = () => {
 	return (
 		<div>
