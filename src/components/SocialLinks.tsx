@@ -12,7 +12,7 @@ const SocialLinks = () => {
 		{ icon: <FaTwitter />, link: '/' },
 	];
 	return (
-		<div className="flex flex-col gap-4">
+		<div className="flex flex-col gap-2 md:gap-4">
 			<h1 className="text-lg font-semibold text-black">Follow Us on</h1>
 			<ul className="flex gap-4">
 				{SocialLinks.map((link, index) => (

@@ -75,7 +75,7 @@ const Footer = () => {
 						))}
 					</div>
 
-					<div className="flex flex-col gap-20">
+					<div className="flex flex-col gap-5 md:gap-20">
 						<Subscribe />
 						<SocialLinks />
 					</div>
