@@ -11,7 +11,7 @@ interface HeaderWrapperProps {
 
 const HeaderWrapper = ({ className, children }: HeaderWrapperProps) => {
 	return (
-		<div className="m-4 rounded-full border-b bg-white shadow-sm">
+		<div className="rounded-full border-b bg-white shadow-sm">
 			<div className={cn('flex h-20 items-center justify-between px-4', className)}>{children}</div>
 		</div>
 	);
@@ -19,7 +19,7 @@ const HeaderWrapper = ({ className, children }: HeaderWrapperProps) => {
 
 const Header: React.FC = () => {
 	return (
-		<div className="sticky top-0 z-50">
+		<div className="z-50 p-10">
 			<HeaderWrapper className="flex items-center justify-between">
 				<LogoLink />
 				<Navigation />
