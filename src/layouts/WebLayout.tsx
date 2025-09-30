@@ -6,17 +6,11 @@ const WebLayout = () => {
 	return (
 		<div className="flex min-h-screen flex-col">
 			{' '}
-			<div>
-				<Header />
-			</div>
-			<div>
-				<main className="flex-grow">
-					<Outlet />
-				</main>
-			</div>
-			<div>
-				<Footer />
-			</div>
+			<Header />
+			<main className="flex-grow">
+				<Outlet />
+			</main>
+			<Footer />
 		</div>
 	);
 };

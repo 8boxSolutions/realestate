@@ -18,11 +18,11 @@ const Footer = () => {
 			sectionTitle: 'Quick Links',
 			sectionLinks: [
 				{ label: 'Home', href: '/' },
-				{ label: 'Buy', href: '/buy' },
-				{ label: 'Rent', href: '/rent' },
-				{ label: 'New Developments', href: '/new-developments' },
-				{ label: 'Foreclosures', href: '/foreclosures' },
-				{ label: 'Resources', href: '/resources' },
+				{ label: 'Buy', href: '/' },
+				{ label: 'Rent', href: '/' },
+				{ label: 'New Developments', href: '/' },
+				{ label: 'Foreclosures', href: '/' },
+				{ label: 'Resources', href: '/' },
 			],
 		},
 		{
@@ -75,7 +75,7 @@ const Footer = () => {
 						))}
 					</div>
 
-					<div className="flex flex-col gap-5 md:gap-20">
+					<div className="flex flex-col gap-2 md:gap-20">
 						<Subscribe />
 						<SocialLinks />
 					</div>
