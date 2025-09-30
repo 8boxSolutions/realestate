@@ -4,12 +4,13 @@ import Footer from '@/components/Footer';
 
 const WebLayout = () => {
 	return (
-		<div className="flex min-h-screen flex-col justify-between">
+		<div className="flex min-h-screen flex-col">
+			{' '}
 			<div>
 				<Header />
 			</div>
 			<div>
-				<main>
+				<main className="flex-grow">
 					<Outlet />
 				</main>
 			</div>
