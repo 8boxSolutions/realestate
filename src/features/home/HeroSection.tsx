@@ -3,7 +3,7 @@ import BookARent from '@/bookings/BookARent';
 const HeroSection = () => {
 	return (
 		<>
-			<div className="flex w-full flex-col justify-center p-10">
+			<div className="flex w-full flex-col justify-center">
 				<img src={background} alt="background" className="min-h-0 w-full rounded-4xl object-cover" />
 				<div className="w-full -translate-y-10 sm:mx-auto sm:max-w-7xl sm:-translate-y-12">
 					<BookARent />
