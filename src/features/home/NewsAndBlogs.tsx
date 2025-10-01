@@ -1,12 +1,12 @@
 import { properties } from '@/constants/newsandblogsData';
-import { FaUser, FaTag } from 'react-icons/fa';
+import { FaUser, FaTag, FaArrowRight } from 'react-icons/fa';
 import { CiCalendar } from 'react-icons/ci';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
 const NewsAndBlogs = () => {
 	return (
-		<section className="flex flex-col space-y-5 p-3 text-black md:p-5">
+		<section className="flex flex-col space-y-5 p-5 text-black md:p-5">
 			<p className="text-center text-xl text-primary md:text-2xl lg:text-3xl">NEWS AND BLOGS</p>
 			<h1 className="text-center text-2xl font-semibold md:text-4xl lg:text-5xl">Property News & Insights</h1>
 
@@ -45,6 +45,11 @@ const NewsAndBlogs = () => {
 						</div>
 					</div>
 				))}
+			</div>
+			<div className="flex justify-center py-16">
+				<Button variant="outline" className="w-60 rounded-full py-8 text-lg text-primary">
+					View all <FaArrowRight />
+				</Button>
 			</div>
 		</section>
 	);
