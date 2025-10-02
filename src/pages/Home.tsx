@@ -5,6 +5,7 @@ import NeighborhoodGuides from '@/features/home/NeighborhoodGuides';
 import NewsAndBlogs from '@/features/home/NewsAndBlogs';
 import PropertyList from '@/features/home/PropertyList';
 import LatestPropeties from '@/features/home/LatestPropeties';
+import FeaturesTestimonials from '@/features/home/FeaturesTestimonials';
 const Home = () => {
 	return (
 		<div className="p-20">
@@ -13,6 +14,7 @@ const Home = () => {
 			<LatestPropeties />
 			<NeighborhoodGuides />
 			<NewsAndBlogs />
+			<FeaturesTestimonials />
 			<FeatureStats />
 			<PropertyList />
 		</div>
