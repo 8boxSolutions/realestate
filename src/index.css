@@ -22,6 +22,27 @@ body {
   -ms-overflow-style: none; 
 }
 
+
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.testimonials-pagination .swiper-pagination-bullet {
+  background: #D9D9D9 !important;
+  opacity: 1 !important;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+}
+
+.testimonials-pagination .swiper-pagination-bullet-active {
+  background: #E0401E !important;
+}
+
+
 :root {
 	--background: #fffffe;
 	--foreground: #3f3e5e;
@@ -72,6 +93,7 @@ body {
 	--shadow-xl: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 8px 10px -1px rgb(0 0 0 / 0.1);
 	--shadow-2xl: 0 1px 3px 0px rgb(0 0 0 / 0.25);
 }
+
 
 .dark {
 	--background: #0a0a0a;
@@ -194,4 +216,6 @@ body {
 	h6 {
 		@apply text-[6px] font-medium;
 	}
+
+	
 }

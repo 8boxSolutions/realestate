@@ -14,7 +14,7 @@ const SocialLinks = () => {
 	return (
 		<div className="flex flex-col gap-2 md:gap-4">
 			<h1 className="text-lg font-semibold text-black">Follow Us on</h1>
-			<ul className="flex gap-4">
+			<ul className="flex gap-2">
 				{SocialLinks.map((link, index) => (
 					<li key={index}>
 						<Link to={link.link}>

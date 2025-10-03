@@ -11,9 +11,9 @@ const categories = [
 
 const BookCategories = () => {
 	return (
-		<div>
+		<div className="w-full">
 			<Select>
-				<SelectTrigger className="w-full min-w-80">
+				<SelectTrigger className="w-full">
 					<SelectValue placeholder="Category" />
 				</SelectTrigger>
 				<SelectContent>

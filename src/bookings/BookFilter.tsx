@@ -18,11 +18,11 @@ import FilterFeatures from './filters/FilterFeatures';
 
 const BookFilter = () => {
 	return (
-		<div>
+		<div className="flex items-center">
 			<Dialog>
 				<DialogTrigger asChild>
 					<button>
-						<img src={filterIcon} alt="Filter" />
+						<img src={filterIcon} alt="Filter" className="lg:size-30" />
 					</button>
 				</DialogTrigger>
 				<DialogContent>
