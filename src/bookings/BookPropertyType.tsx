@@ -7,9 +7,9 @@ const propertyType = [
 
 const BookPropertyType = () => {
 	return (
-		<div>
+		<div className="w-full">
 			<Select>
-				<SelectTrigger className="w-full min-w-80">
+				<SelectTrigger className="w-full">
 					<SelectValue placeholder="Property Type" />
 				</SelectTrigger>
 				<SelectContent>

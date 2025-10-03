@@ -8,7 +8,11 @@ const Subscribe = () => {
 			<h1 className="text-lg font-semibold text-black">Subscribe to our NewsLetter!</h1>
 
 			<div className="relative">
-				<Input type="email" placeholder="Email Address" className="w-50 rounded-full bg-white md:w-80 md:py-6" />
+				<Input
+					type="email"
+					placeholder="Email Address"
+					className="w-full rounded-full bg-white md:w-45 md:py-6 lg:w-80"
+				/>
 				<Button className="absolute right-2 w-10 rounded-full md:top-2">
 					<FaArrowRight className="w-20" />
 				</Button>

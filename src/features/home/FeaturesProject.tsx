@@ -37,7 +37,7 @@ const FeaturesProject = () => {
 				</div>
 			</div>
 
-			<div className="relative">
+			<div className="relative hidden lg:block">
 				<div className="absolute -top-5 -left-20 flex w-full justify-center">
 					<img src={circle1} alt="" className="size-50" />
 				</div>

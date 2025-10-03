@@ -8,7 +8,7 @@ import Marquee from 'react-fast-marquee';
 
 const LatestPropeties = () => {
 	return (
-		<section className="mt-16">
+		<section>
 			<h1 className="text-2xl font-normal text-primary">FEATURED PROPERTIES</h1>
 
 			<div className="mt-9 flex flex-col space-y-2 text-black">

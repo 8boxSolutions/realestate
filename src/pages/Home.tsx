@@ -6,18 +6,30 @@ import NewsAndBlogs from '@/features/home/NewsAndBlogs';
 import PropertyList from '@/features/home/PropertyList';
 import LatestPropeties from '@/features/home/LatestPropeties';
 import FeaturesTestimonials from '@/features/home/FeaturesTestimonials';
+import CompanyPartners from '@/features/home/CompanyPartners';
 const Home = () => {
 	return (
-		<div className="p-20">
-			<HeroSection />
-			<FeaturesProject />
-			<LatestPropeties />
-			<NeighborhoodGuides />
-			<NewsAndBlogs />
+		<>
+			<div className="p-10 md:p-20">
+				<HeroSection />
+				<FeaturesProject />
+			</div>
+
+			<CompanyPartners />
+
+			<div className="p-20">
+				<LatestPropeties />
+				<NeighborhoodGuides />
+				<NewsAndBlogs />
+			</div>
+
 			<FeaturesTestimonials />
-			<FeatureStats />
-			<PropertyList />
-		</div>
+
+			<div className="p-20">
+				<FeatureStats />
+				<PropertyList />
+			</div>
+		</>
 	);
 };
 

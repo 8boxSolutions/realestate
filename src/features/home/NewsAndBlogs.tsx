@@ -46,7 +46,7 @@ const NewsAndBlogs = () => {
 					</div>
 				))}
 			</div>
-			<div className="flex justify-center py-16">
+			<div className="flex justify-center pt-15">
 				<Button variant="outline" className="w-60 rounded-full py-8 text-lg text-primary">
 					View all <FaArrowRight />
 				</Button>

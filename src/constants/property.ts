@@ -5,23 +5,20 @@ interface Property {
 	title: string;
 	place: string;
 	price: string;
+	type: 'For Sale' | 'For Rent';
 	image: string;
 }
 
-export const properties: Property[] = [
-	{ id: 1, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 2, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 3, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 4, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 5, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 6, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 7, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 8, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 9, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 10, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 11, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 12, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 13, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 14, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-	{ id: 15, title: 'Houses For Sale - Manila', place: 'Manila, Philippines', price: 'PHP 2,000,000.00', image: image1 },
-];
+const generateProperties = (count: number, type: 'For Sale' | 'For Rent'): Property[] =>
+	Array.from({ length: count }, (_, i) => ({
+		id: i + 1 + (type === 'For Rent' ? 100 : 0),
+		title: `House ${type} - Manila #${i + 1}`,
+		place: 'Manila, Philippines',
+		price: type === 'For Sale' ? 'PHP 2,000,000.00' : 'PHP 25,000 / month',
+		type,
+		image: image1,
+	}));
+
+export const properties: Property[] = [...generateProperties(15, 'For Sale'), ...generateProperties(15, 'For Rent')];
+
+export type { Property };
