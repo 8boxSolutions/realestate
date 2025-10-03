@@ -13,12 +13,12 @@ const Home = () => {
 			<div className="p-10 md:p-20">
 				<HeroSection />
 				<FeaturesProject />
+				<LatestPropeties />
 			</div>
 
 			<CompanyPartners />
 
 			<div className="p-20">
-				<LatestPropeties />
 				<NeighborhoodGuides />
 				<NewsAndBlogs />
 			</div>
