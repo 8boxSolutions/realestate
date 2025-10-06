@@ -1,10 +1,11 @@
 import { Heart, Search } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const navItems = [
 	{ label: 'Buy', href: '/buy' },
 	{ label: 'Rent', href: '/rent' },
-	{ label: 'New Developments', href: '/new-developments' },
+	{ label: 'New Developments', href: '/new developments' },
 	{ label: 'Foreclosures', href: '/foreclosures' },
 	{ label: 'Resources', href: '/resources' },
 ];
@@ -12,6 +13,7 @@ const navItems = [
 const Navigation = () => {
 	const location = useLocation();
 	const currentPath = location.pathname;
+	const navigate = useNavigate();
 
 	return (
 		<>
@@ -32,7 +34,7 @@ const Navigation = () => {
 					<button>
 						<Search />
 					</button>
-					<button>
+					<button className="cursor-pointer" onClick={() => navigate('/favorite')}>
 						<Heart />
 					</button>
 				</div>
