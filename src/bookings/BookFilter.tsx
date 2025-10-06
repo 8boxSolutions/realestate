@@ -16,14 +16,20 @@ import FilterBathrooms from './filters/FilterBathrooms';
 import FilterArea from './filters/FilterArea';
 import FilterFeatures from './filters/FilterFeatures';
 
-const BookFilter = () => {
+interface filterProps {
+	triggerButton?: React.ReactNode;
+}
+
+const BookFilter: React.FC<filterProps> = ({ triggerButton }) => {
 	return (
 		<div className="flex items-center">
 			<Dialog>
 				<DialogTrigger asChild>
-					<button>
-						<img src={filterIcon} alt="Filter" className="lg:size-30" />
-					</button>
+					{triggerButton || (
+						<button>
+							<img src={filterIcon} alt="Filter" className="lg:size-30" />
+						</button>
+					)}
 				</DialogTrigger>
 				<DialogContent>
 					<div className="scrollbar-hide h-180 w-full overflow-y-auto">
