@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import Navigation from './Navigation';
+import Navigation from './navigation/Navigation';
 import LogoLink from './LogoLink';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
