@@ -28,9 +28,9 @@ const NavDropDown: React.FC<NavDropDownProps> = ({ label, items, active }) => {
 				<DropdownMenuContent
 					side="bottom"
 					sideOffset={8}
-					className="relative overflow-visible rounded-md bg-white shadow-lg"
+					className="relative -top-3 overflow-visible rounded-md bg-white shadow-lg"
 				>
-					<DropdownMenuPrimitive.Arrow className="fill-white drop-shadow-md" width={16} height={8} />
+					<DropdownMenuPrimitive.Arrow className="fill-white drop-shadow-md" width={16} height={20} />
 					{items.map((item, index) => (
 						<DropdownMenuItem key={index} asChild className="text-md flex cursor-pointer p-3">
 							<Link to={item.href}>{item.label}</Link>
