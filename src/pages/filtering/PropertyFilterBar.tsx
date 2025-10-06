@@ -1,4 +1,3 @@
-import React from 'react';
 import SearchFilter from '@/bookings/SearchFilter';
 import ListingFilters from './ListingFilters';
 import { Input } from '@/components/ui/input';
