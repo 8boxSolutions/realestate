@@ -1,8 +1,24 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WebLayout from './layouts/WebLayout';
 import FavoriteSection from './pages/favorite/FavoriteSection';
-import NewDevelopmentsSection from './pages/NewDevelopments/NewDevelopmentsSection';
-import ForeclosuresSection from './pages/Foreclosures/ForeclosuresSection';
+import NewDevelopmentsSection from './pages/NewDevelopmentsSection';
+import ForeclosuresSection from './pages/ForeclosuresSection';
+import Journal from './pages/resources/Journal';
+
+// FOR SALE
+import CondoForSale from './pages/buy/CondoForSale';
+import ApartmentForSale from './pages/buy/ApartmentForSale';
+import LotsForSale from './pages/buy/LotsForSale';
+import CommercialForSale from './pages/buy/CommercialForSale';
+import AllProptertiesForSale from './pages/buy/AllProptertiesForSale';
+
+// FOR RENT
+import CondoForRent from './pages/rent/CondoForRent';
+import ApartmentForRent from './pages/rent/ApartmentForRent';
+import LotsForRent from './pages/rent/LotsForRent';
+import CommercialForRent from './pages/rent/CommercialForRent';
+import AllPropertiesForRent from './pages/rent/AllPropertiesForRent';
+
 import { BuyHouseAndLot, Home } from '@/pages';
 
 function App() {
@@ -15,6 +31,21 @@ function App() {
 					<Route path="/favorite" element={<FavoriteSection />} />
 					<Route path="/new-developments" element={<NewDevelopmentsSection />} />
 					<Route path="/foreclosures" element={<ForeclosuresSection />} />
+					<Route path="/journal" element={<Journal />} />
+
+					{/* BUY */}
+					<Route path="/condo-for-sale" element={<CondoForSale />} />
+					<Route path="/apartments-for-sale" element={<ApartmentForSale />} />
+					<Route path="/lots-for-sale" element={<LotsForSale />} />
+					<Route path="/commercial-unit-for-sale" element={<CommercialForSale />} />
+					<Route path="/all-properties-for-sale" element={<AllProptertiesForSale />} />
+
+					{/* RENT */}
+					<Route path="/condo-for-rent" element={<CondoForRent />} />
+					<Route path="/apartments-for-rent" element={<ApartmentForRent />} />
+					<Route path="/lots-for-rent" element={<LotsForRent />} />
+					<Route path="/commercial-unit-for-rent" element={<CommercialForRent />} />
+					<Route path="/all-properties-for-rent" element={<AllPropertiesForRent />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

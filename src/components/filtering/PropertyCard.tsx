@@ -1,10 +1,10 @@
 import React from 'react';
 import type { PropertyDetails } from '@/constants/housePropertyData';
 import { Heart, Clock, MoveRight } from 'lucide-react';
-import { FaBed, FaUser, FaCar, FaBath } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import { BsFillGridFill } from 'react-icons/bs';
-import { Button } from '@/components';
 import { FaLocationDot } from 'react-icons/fa6';
+import { Button } from '@/components';
 import { Separator } from '@/components/ui/separator';
 import PaginationProperty from '@/components/PaginationProperty';
 
@@ -12,17 +12,32 @@ interface PropertyCardProps {
 	title?: string;
 	data: PropertyDetails[];
 	noOfHouse: string;
+	icon?: {
+		bed?: React.ReactNode;
+		bath?: React.ReactNode;
+		unit?: React.ReactNode;
+		garage?: React.ReactNode;
+	};
+	showDetails?: boolean;
+	type?: 'commercial';
 }
 
-const PropertyCard: React.FC<PropertyCardProps> = ({ title, data, noOfHouse }) => {
+const PropertyCard: React.FC<PropertyCardProps> = ({
+	title,
+	data,
+	noOfHouse,
+	icon,
+	showDetails = true,
+	type = 'commercial',
+}) => {
 	return (
-		<section className="px-5 md:mt-20 md:px-20">
+		<section className="mt-20 px-5 md:px-20">
 			<div className="flex flex-col items-center space-y-4 md:space-y-6">
 				<h1 className="text-2xl font-medium text-primary md:text-3xl">{title}</h1>
-				<h3 className="text-4xl font-semibold text-black md:text-5xl">{noOfHouse}</h3>
+				<h3 className="text-center text-4xl font-semibold text-black md:text-5xl">{noOfHouse}</h3>
 			</div>
 
-			<div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+			<div className="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
 				{data.map((item) => (
 					<div key={item.id} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
 						<div className="relative">
@@ -53,20 +68,40 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ title, data, noOfHouse }) =
 									{item.squareFeet.toLocaleString()} Sq Ft
 								</li>
 
-								<li className="flex items-center justify-end gap-2 text-[#7C8893]">
-									<FaBed className="text-primary" size={18} />
-									{item.bed} Bedrooms
-								</li>
+								{type === 'commercial' && (
+									<li className="flex items-center justify-end gap-2 text-[#7C8893]">
+										{icon?.unit}
+										{item.unit} Units
+									</li>
+								)}
 
-								<li className="flex items-center gap-2 text-[#7C8893]">
-									<FaCar className="text-primary" size={18} />
-									{item.garages} Garages
-								</li>
+								{showDetails && (
+									<>
+										<li className="flex items-center justify-end gap-2 text-[#7C8893]">
+											{icon?.bed}
+											{item.bed} Bedrooms
+										</li>
 
-								<li className="flex items-center justify-end gap-2 text-[#7C8893]">
-									<FaBath className="text-primary" size={18} />
-									{item.bath} Bathrooms
-								</li>
+										<li className="flex items-center gap-2 text-[#7C8893]">
+											{icon?.garage}
+											{item.garages} Garages
+										</li>
+
+										<li className="flex items-center justify-end gap-2 text-[#7C8893]">
+											{item.unit !== undefined ? (
+												<>
+													{icon?.unit}
+													{item.unit} Units
+												</>
+											) : (
+												<>
+													{icon?.bed}
+													{item.bath} Bathrooms
+												</>
+											)}
+										</li>
+									</>
+								)}
 							</ul>
 
 							<Separator />

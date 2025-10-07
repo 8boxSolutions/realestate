@@ -21,12 +21,12 @@ const buyDropDown = [
 ];
 
 const rentDropDown = [
-	{ label: 'House And lot for Sale ', href: '/house-and-lot/buy' },
-	{ label: 'Condo For Sale', href: '/condo-for-sale' },
-	{ label: 'Apartments For Sale', href: '/apartments-for-sale' },
-	{ label: 'Lots For Sale', href: '/lots-for-sale' },
-	{ label: 'Commercial Units For Sale', href: '/commercial-unit-for-sale' },
-	{ label: 'All Properties For Sale', href: '/all-properties-for-sale' },
+	{ label: 'House And lot for Rent ', href: '/house-and-lot/buy' },
+	{ label: 'Condo For Rent', href: '/condo-for-rent' },
+	{ label: 'Apartments For Rent', href: '/apartments-for-rent' },
+	{ label: 'Lots For Rent', href: '/lots-for-rent' },
+	{ label: 'Commercial Units For Rent', href: '/commercial-unit-for-rent' },
+	{ label: 'All Properties For Rent', href: '/all-properties-for-rent' },
 ];
 
 const resourcesDropDown = [
