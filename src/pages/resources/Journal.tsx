@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import FeatureStats from '@/features/home/FeatureStats';
 import NewsAndBlogs from '@/features/home/NewsAndBlogs';
 import LatestPropeties from '@/features/home/LatestPropeties';
