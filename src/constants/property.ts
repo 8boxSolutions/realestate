@@ -20,5 +20,17 @@ const generateProperties = (count: number, type: 'For Sale' | 'For Rent'): Prope
 	}));
 
 export const properties: Property[] = [...generateProperties(15, 'For Sale'), ...generateProperties(15, 'For Rent')];
-
 export type { Property };
+
+export const propertiesJournal: Property[] = Array.from({ length: 15 }, (_, i) => {
+	const type = Math.random() > 0.5 ? 'For Sale' : 'For Rent';
+
+	return {
+		id: i + 1,
+		title: `House ${type} - Manila #${i + 1}`,
+		place: 'Manila, Philippines',
+		price: type === 'For Sale' ? 'PHP 2,000,000.00' : 'PHP 25,000 / month',
+		type,
+		image: image1,
+	};
+});
