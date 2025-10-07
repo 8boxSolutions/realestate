@@ -26,7 +26,7 @@ const CommercialForRent = () => {
 				<div className="pb-20">
 					<PropertyCard
 						data={propertiesCommercialsForSale}
-						title="FOR SALE > COMMERCIAL"
+						title="FOR RENT > COMMERCIAL"
 						noOfHouse="91,203 Commercial Space For Rent"
 						icon={{
 							unit: <BsDoorOpen className="text-primary" size={18} />,

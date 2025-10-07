@@ -26,7 +26,7 @@ const ApartmentForRent = () => {
 				<div className="pb-20">
 					<PropertyCard
 						data={propertiesApartmentForSale}
-						title="FOR SALE > APARTMENT"
+						title="FOR RENT > APARTMENT"
 						noOfHouse="91,203 Apartment For Rent"
 						icon={{
 							bed: <FaBed className="text-primary" size={18} />,

@@ -27,7 +27,7 @@ const CommercialForSale = () => {
 					<PropertyCard
 						data={propertiesCommercialsForSale}
 						title="FOR SALE > COMMERCIAL"
-						noOfHouse="91,203 Commercial space For Sale"
+						noOfHouse="91,203 Commercial Space For Sale"
 						icon={{
 							unit: <BsDoorOpen className="text-primary" size={18} />,
 						}}
