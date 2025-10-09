@@ -45,6 +45,29 @@ body {
   background: #E0401E !important;
 }
 
+.react-international-phone-input-container {
+  width: 100% !important;
+  border-radius: 1rem !important;
+  padding-left: 10px !important;
+}
+
+.react-international-phone-input {
+  width: 100% !important;
+   border-radius: 10px !important;
+}
+
+.react-international-phone-country-selector-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px !important;
+  border-radius: 50px !important;
+  min-width: 40px;
+}
+
+
+
+
 
 :root {
 	--background: #fffffe;

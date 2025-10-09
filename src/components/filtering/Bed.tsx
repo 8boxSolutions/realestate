@@ -1,6 +1,7 @@
 import React from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Button } from '@/components/ui/button';
 interface BedProps {
 	ItemBed: string[];
 }
@@ -18,6 +19,10 @@ const Bed: React.FC<BedProps> = ({ ItemBed }) => {
 							<Checkbox /> {item}
 						</SelectItem>
 					))}
+					<div className="flex justify-between px-2 pt-6 pb-2">
+						<Button variant="outline">Cancel</Button>
+						<Button>Apply</Button>
+					</div>
 				</SelectContent>
 			</Select>
 		</div>

@@ -25,7 +25,7 @@ const LotsForRent = () => {
 				<div className="pb-20">
 					<PropertyCard
 						data={propertiesLotsForSale}
-						title="FOR SALE > LOT"
+						title="FOR RENT > LOT"
 						noOfHouse="91,203 Lot For Rent"
 						showDetails={false}
 					/>

@@ -1,10 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WebLayout from './layouts/WebLayout';
-import FavoriteSection from './pages/favorite/FavoriteSection';
-import NewDevelopmentsSection from './pages/NewDevelopmentsSection';
-import ForeclosuresSection from './pages/ForeclosuresSection';
-import Journal from './pages/resources/Journal';
-
 // FOR SALE
 import CondoForSale from './pages/buy/CondoForSale';
 import ApartmentForSale from './pages/buy/ApartmentForSale';
@@ -19,6 +14,15 @@ import LotsForRent from './pages/rent/LotsForRent';
 import CommercialForRent from './pages/rent/CommercialForRent';
 import AllPropertiesForRent from './pages/rent/AllPropertiesForRent';
 
+import NewDevelopmentsSection from './pages/NewDevelopmentsSection';
+import ForeclosuresSection from './pages/ForeclosuresSection';
+
+// Resources
+import Journal from './pages/resources/Journal';
+import LoanCalculator from './pages/resources/LoanCalculator';
+
+import FavoriteSection from './pages/favorite/FavoriteSection';
+
 import { BuyHouseAndLot, Home } from '@/pages';
 
 function App() {
@@ -28,10 +32,6 @@ function App() {
 				<Route element={<WebLayout />}>
 					<Route path="/" element={<Home />} />
 					<Route path="/house-and-lot/buy" element={<BuyHouseAndLot />} />
-					<Route path="/favorite" element={<FavoriteSection />} />
-					<Route path="/new-developments" element={<NewDevelopmentsSection />} />
-					<Route path="/foreclosures" element={<ForeclosuresSection />} />
-					<Route path="/journal" element={<Journal />} />
 
 					{/* BUY */}
 					<Route path="/condo-for-sale" element={<CondoForSale />} />
@@ -46,6 +46,15 @@ function App() {
 					<Route path="/lots-for-rent" element={<LotsForRent />} />
 					<Route path="/commercial-unit-for-rent" element={<CommercialForRent />} />
 					<Route path="/all-properties-for-rent" element={<AllPropertiesForRent />} />
+
+					<Route path="/new-developments" element={<NewDevelopmentsSection />} />
+					<Route path="/foreclosures" element={<ForeclosuresSection />} />
+
+					{/* RESOURCES */}
+					<Route path="/journal" element={<Journal />} />
+					<Route path="/loan-calculator" element={<LoanCalculator />} />
+
+					<Route path="/favorite" element={<FavoriteSection />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

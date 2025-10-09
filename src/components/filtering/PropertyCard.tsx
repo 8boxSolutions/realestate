@@ -22,14 +22,7 @@ interface PropertyCardProps {
 	type?: 'commercial';
 }
 
-const PropertyCard: React.FC<PropertyCardProps> = ({
-	title,
-	data,
-	noOfHouse,
-	icon,
-	showDetails = true,
-	type = 'commercial',
-}) => {
+const PropertyCard: React.FC<PropertyCardProps> = ({ title, data, noOfHouse, icon, showDetails = true, type = '' }) => {
 	return (
 		<section className="mt-20 px-5 md:px-20">
 			<div className="flex flex-col items-center space-y-4 md:space-y-6">
@@ -95,7 +88,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 												</>
 											) : (
 												<>
-													{icon?.bed}
+													{icon?.bath}
 													{item.bath} Bathrooms
 												</>
 											)}
