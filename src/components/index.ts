@@ -1,6 +1,9 @@
 // -- Badges
 export { default as LocationBadge } from './badge/Location_Badge';
 
+// -- Breadcrumbs
+export { default as NavigationBreadcrumb } from './breadcrumb/Navigation_Breadcrumb';
+
 // -- Cards
 export { default as HouseAndLotCard } from './card/HouseAndLot_Card';
 export { default as FilteringCard } from './card/Filtering_Card';
@@ -16,10 +19,14 @@ export { default as SortBySelect } from './select/SortBy_Select';
 export { default as PriceRangePopover } from './popover/PriceRange_Popover';
 export { default as BedCountPopover } from './popover/BedCount_Popover';
 
+// -- Custom UI
+export { default as Pagination } from './navigation/Pagination';
+
 // shadcn/ui components
 export * from './ui/accordion';
 export * from './ui/alert-dialog';
 export * from './ui/badge';
+export * from './ui/breadcrumb';
 export * from './ui/button';
 export * from './ui/card';
 export * from './ui/carousel';
