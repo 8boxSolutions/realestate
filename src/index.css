@@ -217,31 +217,34 @@ body {
 }
 
 @layer base {
-	* {
-		@apply border-border outline-ring/50;
-	}
-	body {
-		@apply bg-background text-foreground;
-	}
+	  * {
+    @apply border-border outline-ring/50;
+  }
 
-	h1 {
-		@apply text-[68px] font-bold;
-	}
-	h2 {
-		@apply text-[42px] font-semibold;
-	}
-	h3 {
-		@apply text-[26px] font-semibold;
-	}
-	h4 {
-		@apply text-[16px] font-semibold;
-	}
-	h5 {
-		@apply text-[10px] font-medium;
-	}
-	h6 {
-		@apply text-[6px] font-medium;
-	}
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1 {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+  }
+
+  h4 {
+    font-size: var(--text-xl);
+  }
+
+  h2, h3, h4 {
+    font-weight: var(--font-weight-medium);
+  }
 
 	
 }

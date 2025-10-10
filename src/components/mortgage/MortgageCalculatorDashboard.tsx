@@ -1,5 +1,6 @@
 import React from 'react';
 import MortageCalculatorCard from './MortgageCalculatorCard';
+import SummaryMortgageCard from './SummaryMortgageCard';
 
 interface mortgageProps {
 	deposit: number;
@@ -8,6 +9,7 @@ interface mortgageProps {
 	setLoanTerm: (value: number) => void;
 	interestRate: number;
 	setInterestRate: (value: number) => void;
+	// data: string[];
 }
 const MortgageCalculatorDashboard: React.FC<mortgageProps> = ({
 	deposit,
@@ -18,18 +20,22 @@ const MortgageCalculatorDashboard: React.FC<mortgageProps> = ({
 	setInterestRate,
 }) => {
 	return (
-		<div className="mt-13">
+		<div className="w-ful1 pt-15">
 			<h1 className="text-5xl text-primary">Mortgage</h1>
 			<p className="pt-2">Calculate your mortgage credit and organize the purchase of your home.*</p>
 
-			<MortageCalculatorCard
-				deposit={deposit}
-				setDeposit={setDeposit}
-				loanTerm={loanTerm}
-				setLoanTerm={setLoanTerm}
-				interestRate={interestRate}
-				setInterestRate={setInterestRate}
-			/>
+			<div className="mt-9 flex flex-col gap-10 lg:flex-row lg:justify-between">
+				<MortageCalculatorCard
+					deposit={deposit}
+					setDeposit={setDeposit}
+					loanTerm={loanTerm}
+					setLoanTerm={setLoanTerm}
+					interestRate={interestRate}
+					setInterestRate={setInterestRate}
+				/>
+
+				<SummaryMortgageCard />
+			</div>
 		</div>
 	);
 };
