@@ -1,17 +1,11 @@
 import { useState } from 'react';
 import MortgageCalculatorDashboard from '@/components/mortgage/MortgageCalculatorDashboard';
+import { summaryData } from '@/constants/summaryAnalysisData';
 
 const LoanCalculator = () => {
 	const [deposit, setDeposit] = useState<number>(10);
 	const [loanTerm, setLoanTerm] = useState<number>(5);
 	const [interestRate, setInterestRate] = useState<number>(10);
-
-	const data = [
-		{ name: 'Legal Expenses', value: 70, fill: '#ffffff' },
-		{ name: 'Deposit', value: 90, fill: '#FF4D4D' },
-		{ name: 'Mortgage Amount', value: 60, fill: '#9ca3af' },
-		{ name: 'Interest', value: 80, fill: '#DC2626' },
-	];
 
 	return (
 		<div className="w-full p-10">
@@ -38,7 +32,7 @@ const LoanCalculator = () => {
 				setLoanTerm={setLoanTerm}
 				interestRate={interestRate}
 				setInterestRate={setInterestRate}
-				// data={data}
+				data={summaryData}
 			/>
 		</div>
 	);

@@ -1,13 +1,11 @@
 import { ResponsiveContainer, RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
+import type { summaryStats } from '@/constants/summaryAnalysisData';
 
-const data = [
-	{ name: 'Legal Expenses', value: 70, fill: '#ffffff' },
-	{ name: 'Deposit', value: 90, fill: '#FF4D4D' },
-	{ name: 'Mortgage Amount', value: 60, fill: '#9ca3af' },
-	{ name: 'Interest', value: 80, fill: '#DC2626' },
-];
+interface summaryProps {
+	data: summaryStats[];
+}
 
-const AnalyticsSummary = () => {
+const AnalyticsSummary: React.FC<summaryProps> = ({ data }) => {
 	return (
 		<div className="mx-4 mt-8 flex flex-col items-center space-y-6 rounded-2xl bg-[#2B2B2B] px-2 py-6 text-white sm:mx-9 sm:mt-10">
 			{/* Title */}
@@ -39,23 +37,14 @@ const AnalyticsSummary = () => {
 			</div>
 
 			{/* Legend */}
-			<div className="grid grid-cols-2 gap-5 pl-10 lg:gap-2 xl:gap-10">
-				<div className="flex items-center gap-2">
-					<span className="h-3 w-3 rounded-full bg-white"></span>
-					<p className="text-sm text-gray-300 sm:text-base">Legal Expenses</p>
-				</div>
-				<div className="flex items-center gap-2">
-					<span className="h-3 w-3 rounded-full bg-[#FF4D4D]"></span>
-					<p className="text-sm text-gray-300 sm:text-base">Deposit</p>
-				</div>
-				<div className="flex items-center gap-2">
-					<span className="h-3 w-3 rounded-full bg-[#9ca3af]"></span>
-					<p className="text-sm text-gray-300 sm:text-base">Mortgage Amount</p>
-				</div>
-				<div className="flex items-center gap-2">
-					<span className="h-3 w-3 rounded-full bg-[#DC2626]"></span>
-					<p className="text-sm text-gray-300 sm:text-base">Interest</p>
-				</div>
+
+			<div className="grid grid-cols-1 gap-5 pl-5 sm:grid-cols-2 md:pl-10 lg:gap-2 xl:gap-10">
+				{data.map((item, index) => (
+					<div key={index} className="flex items-center gap-2">
+						<span className="h-3 w-3 rounded-full" style={{ backgroundColor: item.fill }}></span>
+						<p className="text-sm text-gray-300 sm:text-base">{item.name}</p>
+					</div>
+				))}
 			</div>
 		</div>
 	);

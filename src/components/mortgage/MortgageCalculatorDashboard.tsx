@@ -1,6 +1,7 @@
 import React from 'react';
 import MortageCalculatorCard from './MortgageCalculatorCard';
 import SummaryMortgageCard from './SummaryMortgageCard';
+import type { summaryStats } from '@/constants/summaryAnalysisData';
 
 interface mortgageProps {
 	deposit: number;
@@ -9,7 +10,7 @@ interface mortgageProps {
 	setLoanTerm: (value: number) => void;
 	interestRate: number;
 	setInterestRate: (value: number) => void;
-	// data: string[];
+	data: summaryStats[];
 }
 const MortgageCalculatorDashboard: React.FC<mortgageProps> = ({
 	deposit,
@@ -18,6 +19,7 @@ const MortgageCalculatorDashboard: React.FC<mortgageProps> = ({
 	setLoanTerm,
 	interestRate,
 	setInterestRate,
+	data,
 }) => {
 	return (
 		<div className="w-ful1 pt-15">
@@ -34,7 +36,7 @@ const MortgageCalculatorDashboard: React.FC<mortgageProps> = ({
 					setInterestRate={setInterestRate}
 				/>
 
-				<SummaryMortgageCard />
+				<SummaryMortgageCard data={data} />
 			</div>
 		</div>
 	);
