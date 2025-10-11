@@ -20,6 +20,7 @@ import ForeclosuresSection from './pages/ForeclosuresSection';
 // Resources
 import Journal from './pages/resources/Journal';
 import LoanCalculator from './pages/resources/LoanCalculator';
+import PropertyGuidelines from './pages/resources/propertyGuidelines/PropertyGuidelines';
 
 import FavoriteSection from './pages/favorite/FavoriteSection';
 
@@ -53,6 +54,7 @@ function App() {
 					{/* RESOURCES */}
 					<Route path="/journal" element={<Journal />} />
 					<Route path="/loan-calculator" element={<LoanCalculator />} />
+					<Route path="/property-guides" element={<PropertyGuidelines />} />
 
 					<Route path="/favorite" element={<FavoriteSection />} />
 				</Route>
