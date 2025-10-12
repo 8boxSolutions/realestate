@@ -1,7 +1,7 @@
 import bg from '@/assets/guidelines/img-bg.jpg';
-import img from '@/assets/guidelines/img-bg.jpg';
 import GuidelinesAndImages from './GuidelinesAndImages';
 import PropertyList from '@/features/home/PropertyList';
+import PropertyPolicy from './PropertyPolicy';
 const PropertyGuidelines = () => {
 	return (
 		<div className="px-10 py-10">
@@ -27,6 +27,7 @@ const PropertyGuidelines = () => {
 				<div className="absolute inset-0 rounded-2xl bg-[#39000073]/45"></div>
 			</div>
 			<GuidelinesAndImages />
+			<PropertyPolicy />
 			<PropertyList />
 		</div>
 	);
