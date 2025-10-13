@@ -16,7 +16,7 @@ const LotsForRent = () => {
 						backgroundPosition: 'center',
 					}}
 				>
-					<h1 className="text-5xl text-white lg:text-8xl">Lot For Rent</h1>
+					<h1 className="text-center text-5xl text-white lg:text-6xl">Condominium For Rent</h1>
 				</div>
 				<div className="-mt-53 rounded-2xl bg-white shadow-2xl">
 					<PropertyFilterBar />

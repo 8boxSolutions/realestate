@@ -4,7 +4,7 @@ import img3 from '@/assets/condo/img3.png';
 import img4 from '@/assets/apartment/img4.png';
 import img5 from '@/assets/lots/img-5.png';
 import img6 from '@/assets/commercials/img6.png';
-
+import img7 from '@/assets/imgs/sampleHouseAndLot.png';
 export interface PropertyDetails {
 	id: string;
 	squareFeet: number;
@@ -95,6 +95,20 @@ export const propertiesCommercialsForSale: PropertyDetails[] = Array.from({ leng
 	price: 2500000,
 	time: '2 days ago',
 	image: img6,
+	location: 'Quezon City, Manila 1234',
+	title: `17 Quaker Road, Manila #${i + 1}`,
+}));
+
+export const propertiesHouseAndLotForSale: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
+	id: (i + 1).toString(),
+	squareFeet: 1000,
+	bed: 5,
+	user: 'John Smith',
+	garages: 1,
+	bath: 3,
+	price: 2500000,
+	time: '2 days ago',
+	image: img7,
 	location: 'Quezon City, Manila 1234',
 	title: `17 Quaker Road, Manila #${i + 1}`,
 }));
