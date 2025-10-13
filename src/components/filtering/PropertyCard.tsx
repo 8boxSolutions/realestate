@@ -20,11 +20,20 @@ interface PropertyCardProps {
 	};
 	showDetails?: boolean;
 	type?: 'commercial';
+	showHeart?: boolean;
 }
 
-const PropertyCard: React.FC<PropertyCardProps> = ({ title, data, noOfHouse, icon, showDetails = true, type = '' }) => {
+const PropertyCard: React.FC<PropertyCardProps> = ({
+	title,
+	data,
+	noOfHouse,
+	icon,
+	showDetails = true,
+	type = '',
+	showHeart = true,
+}) => {
 	return (
-		<section className="mt-20 px-5 md:px-20">
+		<section className="mt-30 px-5 md:px-20">
 			<div className="flex flex-col items-center space-y-4 md:space-y-6">
 				<h1 className="text-2xl font-medium text-primary md:text-3xl">{title}</h1>
 				<h3 className="text-center text-4xl font-semibold text-black md:text-5xl">{noOfHouse}</h3>
@@ -38,9 +47,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ title, data, noOfHouse, ico
 
 							<div className="absolute top-5 right-5 left-5 flex justify-between">
 								<Button className="text-sm font-semibold italic md:text-lg">₱ {item.price.toLocaleString()}</Button>
-								<span>
-									<Heart className="text-primary" />
-								</span>
+								<span>{showHeart && <Heart className="text-primary" />}</span>
 							</div>
 						</div>
 
