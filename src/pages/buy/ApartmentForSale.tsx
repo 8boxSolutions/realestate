@@ -33,6 +33,7 @@ const ApartmentForSale = () => {
 							bath: <FaBath className="text-primary" size={18} />,
 							garage: <FaCar className="text-primary" size={18} />,
 						}}
+						basePath="/apartments-for-sale"
 					/>
 				</div>
 			</section>

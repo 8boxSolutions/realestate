@@ -34,6 +34,7 @@ const CondoForSale = () => {
 							unit: <BsDoorOpen className="text-primary" size={18} />,
 							garage: <FaCar className="text-primary" size={18} />,
 						}}
+						basePath="/condo-for-sale"
 					/>
 				</div>
 			</section>

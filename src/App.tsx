@@ -29,7 +29,7 @@ import { BuyHouseAndLot, Home } from '@/pages';
 // BUY DETAILS
 import HouseForSaleDetails from './features/home/buyDetails/HouseForSaleDetails';
 import CondoForSaleDetails from './features/home/buyDetails/CondoForSaleDetails';
-import UnitsForSaleDetails from './features/home/buyDetails/UnitsForSaleDetails';
+import CommercialForSaleDetails from './features/home/buyDetails/CommercialForSaleDetails';
 import ApartmentsForSaleDetails from './features/home/buyDetails/ApartmentsForSaleDetails';
 import LotForSaleDetails from './features/home/buyDetails/LotForSaleDetails';
 
@@ -53,7 +53,7 @@ function App() {
 					<Route path="/lots-for-sale/:lotId" element={<LotForSaleDetails />} />
 
 					<Route path="/commercial-unit-for-sale" element={<CommercialForSale />} />
-					<Route path="/commercial-unit-for-sale/:unitId" element={<UnitsForSaleDetails />} />
+					<Route path="/commercial-unit-for-sale/:commercialId" element={<CommercialForSaleDetails />} />
 
 					<Route path="/all-properties-for-sale" element={<AllProptertiesForSale />} />
 

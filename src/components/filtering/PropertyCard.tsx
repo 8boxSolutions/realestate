@@ -1,9 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+// STATIC DATA
 import type { PropertyDetails } from '@/constants/housePropertyData';
+
+// THIRD-PARTY
 import { Heart, Clock, MoveRight } from 'lucide-react';
 import { FaUser } from 'react-icons/fa';
 import { BsFillGridFill } from 'react-icons/bs';
 import { FaLocationDot } from 'react-icons/fa6';
+
+// COMPONENT UI
 import { Button } from '@/components';
 import { Separator } from '@/components/ui/separator';
 import PaginationProperty from '@/components/PaginationProperty';
@@ -21,6 +28,7 @@ interface PropertyCardProps {
 	showDetails?: boolean;
 	type?: 'commercial';
 	showHeart?: boolean;
+	basePath?: string;
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({
@@ -31,6 +39,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 	showDetails = true,
 	type = '',
 	showHeart = true,
+	basePath,
 }) => {
 	return (
 		<section className="mt-30 px-5 md:px-20">
@@ -118,9 +127,11 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 							</div>
 						</div>
 
-						<button className="flex w-full items-center justify-center gap-2 bg-[#2B2B2B] py-4 text-lg text-white transition hover:bg-primary md:py-5">
-							View <MoveRight />
-						</button>
+						<Link to={`${basePath}/${item.id}`}>
+							<button className="flex w-full items-center justify-center gap-2 bg-[#2B2B2B] py-4 text-lg text-white transition hover:bg-primary md:py-5">
+								View <MoveRight />
+							</button>
+						</Link>
 					</div>
 				))}
 			</div>
