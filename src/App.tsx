@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WebLayout from './layouts/WebLayout';
 // FOR SALE
+import { BuyHouseAndLot, Home } from '@/pages';
 import CondoForSale from './pages/buy/CondoForSale';
 import ApartmentForSale from './pages/buy/ApartmentForSale';
 import LotsForSale from './pages/buy/LotsForSale';
@@ -8,11 +9,12 @@ import CommercialForSale from './pages/buy/CommercialForSale';
 import AllProptertiesForSale from './pages/buy/AllProptertiesForSale';
 
 // FOR RENT
-// import CondoForRent from './pages/rent/CondoForRent';
-// import ApartmentForRent from './pages/rent/ApartmentForRent';
-// import LotsForRent from './pages/rent/LotsForRent';
-// import CommercialForRent from './pages/rent/CommercialForRent';
-// import AllPropertiesForRent from './pages/rent/AllPropertiesForRent';
+import HouseAndLotForRent from './pages/rent/HouseAndLotForRent';
+import CondoForRent from './pages/rent/CondoForRent';
+import ApartmentForRent from './pages/rent/ApartmentForRent';
+import LotsForRent from './pages/rent/LotsForRent';
+import CommercialForRent from './pages/rent/CommercialForRent';
+import AllPropertiesForRent from './pages/rent/AllPropertiesForRent';
 
 import NewDevelopmentsSection from './pages/NewDevelopmentsSection';
 import ForeclosuresSection from './pages/ForeclosuresSection';
@@ -24,14 +26,19 @@ import PropertyGuidelines from './pages/resources/propertyGuidelines/PropertyGui
 
 import FavoriteSection from './pages/favorite/FavoriteSection';
 
-import { BuyHouseAndLot, Home } from '@/pages';
-
 // BUY DETAILS
 import HouseForSaleDetails from './features/home/buyDetails/HouseForSaleDetails';
 import CondoForSaleDetails from './features/home/buyDetails/CondoForSaleDetails';
 import CommercialForSaleDetails from './features/home/buyDetails/CommercialForSaleDetails';
 import ApartmentsForSaleDetails from './features/home/buyDetails/ApartmentsForSaleDetails';
 import LotForSaleDetails from './features/home/buyDetails/LotForSaleDetails';
+
+// RENT DETAILS
+import HouseForRentDetail from './features/home/rentDetails/HouseForRentDetails';
+import CondoForRentDetails from './features/home/rentDetails/CondoForRentDetails';
+import CommercialForRentDetails from './features/home/rentDetails/CommercialForRentDetails';
+import ApartmentsForRentDetails from './features/home/rentDetails/ApartmentsForRentDetails';
+import LotForRentDetails from './features/home/buyDetails/LotForSaleDetails';
 
 function App() {
 	return (
@@ -45,24 +52,32 @@ function App() {
 
 					<Route path="/condo-for-sale" element={<CondoForSale />} />
 					<Route path="/condo-for-sale/:condoId" element={<CondoForSaleDetails />} />
-
 					<Route path="/apartments-for-sale" element={<ApartmentForSale />} />
 					<Route path="/apartments-for-sale/:apartmentId" element={<ApartmentsForSaleDetails />} />
-
 					<Route path="/lots-for-sale" element={<LotsForSale />} />
 					<Route path="/lots-for-sale/:lotId" element={<LotForSaleDetails />} />
-
 					<Route path="/commercial-unit-for-sale" element={<CommercialForSale />} />
 					<Route path="/commercial-unit-for-sale/:commercialId" element={<CommercialForSaleDetails />} />
 
 					<Route path="/all-properties-for-sale" element={<AllProptertiesForSale />} />
 
 					{/* RENT */}
-					{/* <Route path="/condo-for-rent" element={<CondoForRent />} />
+					<Route path="/house-and-lot-for-rent" element={<HouseAndLotForRent />} />
+					<Route path="/house-and-lot-for-rent/:houseId" element={<HouseForRentDetail />} />
+
+					<Route path="/condo-for-rent" element={<CondoForRent />} />
+					<Route path="/condo-for-rent/:condoId" element={<CondoForRentDetails />} />
+
 					<Route path="/apartments-for-rent" element={<ApartmentForRent />} />
+					<Route path="/apartments-for-rent/:apartmentId" element={<ApartmentsForRentDetails />} />
+
 					<Route path="/lots-for-rent" element={<LotsForRent />} />
+					<Route path="/lots-for-rent/:lotId" element={<LotForRentDetails />} />
+
 					<Route path="/commercial-unit-for-rent" element={<CommercialForRent />} />
-					<Route path="/all-properties-for-rent" element={<AllPropertiesForRent />} /> */}
+					<Route path="/commercial-unit-for-rent/:commercialId" element={<CommercialForRentDetails />} />
+
+					<Route path="/all-properties-for-rent" element={<AllPropertiesForRent />} />
 
 					<Route path="/new-developments" element={<NewDevelopmentsSection />} />
 					<Route path="/foreclosures" element={<ForeclosuresSection />} />

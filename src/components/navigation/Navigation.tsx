@@ -21,7 +21,7 @@ const buyDropDown = [
 ];
 
 const rentDropDown = [
-	{ label: 'House And lot for Rent ', href: '/house-and-lot/buy' },
+	{ label: 'House And lot for Rent ', href: '/house-and-lot-for-rent' },
 	{ label: 'Condo For Rent', href: '/condo-for-rent' },
 	{ label: 'Apartments For Rent', href: '/apartments-for-rent' },
 	{ label: 'Lots For Rent', href: '/lots-for-rent' },

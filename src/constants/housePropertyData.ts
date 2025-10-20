@@ -101,7 +101,7 @@ export const propertiesCommercialsForSale: PropertyDetails[] = Array.from({ leng
 }));
 
 export const propertiesHouseAndLotForSale: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
-	id: `${i + 1}-house-sale`,
+	id: `${i + 1}-house`,
 	squareFeet: 1000,
 	bed: 5,
 	user: 'John Smith',

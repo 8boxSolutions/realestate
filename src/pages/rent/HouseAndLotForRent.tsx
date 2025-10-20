@@ -1,15 +1,15 @@
-import bg from '@/assets/apartment/bg-apartment-for-sale.png';
+import bg from '@/assets/imgs/HouseAndLotBG.jpg';
 import PropertyFilterBar from '@/components/filtering/PropertyFilterBar';
 import PropertyCard from '@/components/filtering/PropertyCard';
 import { FaBed, FaCar, FaBath } from 'react-icons/fa';
-import { propertiesApartmentForSale } from '@/constants/housePropertyData';
+import { propertiesHouseAndLotForSale } from '@/constants/housePropertyData';
 
-const ApartmentForRent = () => {
+const HouseAndLotForRent = () => {
 	return (
 		<div>
 			<section className="-mt-45">
 				<div
-					className="flex min-h-200 items-center justify-center"
+					className="relative flex min-h-200 items-center justify-center"
 					style={{
 						backgroundImage: `url(${bg})`,
 						backgroundSize: 'cover',
@@ -17,23 +17,27 @@ const ApartmentForRent = () => {
 						backgroundPosition: 'center',
 					}}
 				>
-					<h1 className="text-center text-5xl text-white lg:text-6xl">Apartment For Rent</h1>
+					<h1 className="relative z-10 text-5xl text-white lg:text-6xl">Apartment For Rent</h1>
+
+					<div className="absolute inset-0 rounded-2xl bg-[#39000073]/70"></div>
 				</div>
-				<div className="-mt-53 rounded-2xl bg-white shadow-2xl">
+
+				<div className="absolute -mt-55 w-full rounded-2xl bg-white shadow-2xl">
 					<PropertyFilterBar />
 				</div>
 
 				<div className="pb-20">
 					<PropertyCard
-						data={propertiesApartmentForSale}
-						title="FOR RENT > APARTMENT"
-						noOfHouse="91,203 Apartment For Rent"
+						data={propertiesHouseAndLotForSale}
+						title="FOR RENT > HOUSES"
+						noOfHouse="91,203 House and lot For Rent"
 						icon={{
 							bed: <FaBed className="text-primary" size={18} />,
 							bath: <FaBath className="text-primary" size={18} />,
 							garage: <FaCar className="text-primary" size={18} />,
 						}}
-						basePath="/apartments-for-rent"
+						showHeart={false}
+						basePath="/house-and-lot-for-rent"
 					/>
 				</div>
 			</section>
@@ -41,4 +45,4 @@ const ApartmentForRent = () => {
 	);
 };
 
-export default ApartmentForRent;
+export default HouseAndLotForRent;

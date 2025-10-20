@@ -38,7 +38,7 @@ const baseHouse = {
 
 export const houseProperties: Details[] = Array.from({ length: 6 }, (_, i) => ({
 	...baseHouse,
-	id: `${i + 1}-house-sale`,
+	id: `${i + 1}-house`,
 }));
 
 // APARTMENT
