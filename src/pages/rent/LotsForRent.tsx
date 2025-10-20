@@ -28,6 +28,7 @@ const LotsForRent = () => {
 						title="FOR RENT > LOT"
 						noOfHouse="91,203 Lot For Rent"
 						showDetails={false}
+						basePath="/lots-for-rent"
 					/>
 				</div>
 			</section>

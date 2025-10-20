@@ -28,6 +28,7 @@ const LotsForSale = () => {
 						title="FOR SALE > LOT"
 						noOfHouse="91,203 Lot For Sale"
 						showDetails={false}
+						basePath="/lots-for-sale"
 					/>
 				</div>
 			</section>

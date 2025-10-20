@@ -33,6 +33,7 @@ const CommercialForRent = () => {
 						}}
 						type="commercial"
 						showDetails={false}
+						basePath="/commercial-unit-for-rent"
 					/>
 				</div>
 			</section>

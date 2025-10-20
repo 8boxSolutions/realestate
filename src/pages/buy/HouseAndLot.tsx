@@ -36,6 +36,7 @@ const BuyHouseAndLot = () => {
 						garage: <FaCar className="text-primary" size={18} />,
 					}}
 					showHeart={false}
+					basePath="/house-and-lot/buy"
 				/>
 			</div>
 		</section>

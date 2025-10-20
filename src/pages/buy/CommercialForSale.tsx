@@ -33,6 +33,7 @@ const CommercialForSale = () => {
 						}}
 						type="commercial"
 						showDetails={false}
+						basePath="/commercial-unit-for-sale"
 					/>
 				</div>
 			</section>

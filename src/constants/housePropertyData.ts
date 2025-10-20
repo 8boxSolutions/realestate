@@ -22,7 +22,7 @@ export interface PropertyDetails {
 }
 
 export const propertiesDevelopments: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
-	id: (i + 1).toString(),
+	id: `${i + 1}-development`.toString(),
 	squareFeet: 1000,
 	bed: 5,
 	user: 'John Smith',
@@ -36,7 +36,7 @@ export const propertiesDevelopments: PropertyDetails[] = Array.from({ length: 6 
 }));
 
 export const propertiesForeclosures: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
-	id: (i + 1).toString(),
+	id: `${i + 1}-foreclosures`.toString(),
 	squareFeet: 1000,
 	bed: 5,
 	user: 'John Smith',
@@ -46,11 +46,11 @@ export const propertiesForeclosures: PropertyDetails[] = Array.from({ length: 6 
 	time: '2 days ago',
 	image: img2,
 	location: 'Quezon City, Manila 1234',
-	title: `17 Quaker Road, Manila #${i + 1}`,
+	title: `17 Quaker Road, Manila `,
 }));
 
 export const propertiesCondoForSale: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
-	id: (i + 1).toString(),
+	id: `${i + 1}-condo`.toString(),
 	squareFeet: 1000,
 	unit: 4,
 	user: 'John Smith',
@@ -60,11 +60,11 @@ export const propertiesCondoForSale: PropertyDetails[] = Array.from({ length: 6 
 	time: '2 days ago',
 	image: img3,
 	location: 'Quezon City, Manila 1234',
-	title: `17 Quaker Road, Manila #${i + 1}`,
+	title: `17 Quaker Road, Manila `,
 }));
 
 export const propertiesApartmentForSale: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
-	id: (i + 1).toString(),
+	id: `${i + 1}-apartment`.toString(),
 	squareFeet: 1000,
 	bed: 5,
 	user: 'John Smith',
@@ -74,22 +74,22 @@ export const propertiesApartmentForSale: PropertyDetails[] = Array.from({ length
 	time: '2 days ago',
 	image: img4,
 	location: 'Quezon City, Manila 1234',
-	title: `17 Quaker Road, Manila #${i + 1}`,
+	title: `17 Quaker Road, Manila `,
 }));
 
 export const propertiesLotsForSale: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
-	id: (i + 1).toString(),
+	id: `${i + 1}-lot`.toString(),
 	squareFeet: 480000,
 	user: 'John Smith',
 	price: 2500000,
 	time: '2 days ago',
 	image: img5,
 	location: 'Quezon City, Manila 1234',
-	title: `17 Quaker Road, Manila #${i + 1}`,
+	title: `17 Quaker Road, Manila `,
 }));
 
 export const propertiesCommercialsForSale: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
-	id: (i + 1).toString(),
+	id: `${i + 1}-commercials `.toString(),
 	squareFeet: 480000,
 	unit: 14,
 	user: 'John Smith',
@@ -97,11 +97,11 @@ export const propertiesCommercialsForSale: PropertyDetails[] = Array.from({ leng
 	time: '2 days ago',
 	image: img6,
 	location: 'Quezon City, Manila 1234',
-	title: `17 Quaker Road, Manila #${i + 1}`,
+	title: `17 Quaker Road, Manila `,
 }));
 
 export const propertiesHouseAndLotForSale: PropertyDetails[] = Array.from({ length: 6 }, (_, i) => ({
-	id: (i + 1).toString(),
+	id: `${i + 1}-house`,
 	squareFeet: 1000,
 	bed: 5,
 	user: 'John Smith',
@@ -111,7 +111,7 @@ export const propertiesHouseAndLotForSale: PropertyDetails[] = Array.from({ leng
 	time: '2 days ago',
 	image: img7,
 	location: 'Quezon City, Manila 1234',
-	title: `17 Quaker Road, Manila #${i + 1}`,
+	title: `17 Quaker Road, Manila `,
 }));
 
 // ALL PROPERTIES
