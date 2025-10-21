@@ -40,6 +40,9 @@ import CommercialForRentDetails from './features/home/rentDetails/CommercialForR
 import ApartmentsForRentDetails from './features/home/rentDetails/ApartmentsForRentDetails';
 import LotForRentDetails from './features/home/buyDetails/LotForSaleDetails';
 
+import NewDevelopmentsDetails from './features/home/NewDevelopmentsDetails';
+import ForeclosuresDetails from './features/home/ForeclosuresDetails';
+
 function App() {
 	return (
 		<BrowserRouter>
@@ -80,7 +83,9 @@ function App() {
 					<Route path="/all-properties-for-rent" element={<AllPropertiesForRent />} />
 
 					<Route path="/new-developments" element={<NewDevelopmentsSection />} />
+					<Route path="/new-developments/:developmentId" element={<NewDevelopmentsDetails />} />
 					<Route path="/foreclosures" element={<ForeclosuresSection />} />
+					<Route path="/foreclosures/:foreclosureId" element={<ForeclosuresDetails />} />
 					{/* RESOURCES */}
 					<Route path="/journal" element={<Journal />} />
 					<Route path="/loan-calculator" element={<LoanCalculator />} />

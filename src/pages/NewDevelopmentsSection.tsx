@@ -32,6 +32,7 @@ const NewDevelopmentsSection = () => {
 						bath: <FaBath className="text-primary" size={18} />,
 						garage: <FaCar className="text-primary" size={18} />,
 					}}
+					basePath="/new-developments"
 				/>
 			</div>
 		</section>

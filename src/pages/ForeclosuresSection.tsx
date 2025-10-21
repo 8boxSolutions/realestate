@@ -31,6 +31,7 @@ const ForeclosuresSection = () => {
 						bath: <FaBath className="text-primary" size={18} />,
 						garage: <FaCar className="text-primary" size={18} />,
 					}}
+					basePath="/foreclosures"
 				/>
 			</div>
 		</div>

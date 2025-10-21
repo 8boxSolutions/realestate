@@ -3,7 +3,7 @@ import AnalyticsSummary from './AnalyticsSummary';
 import type { summaryStats } from '@/constants/summaryAnalysisData';
 
 interface summaryProps {
-	data: summaryStats[];
+	data?: summaryStats[];
 }
 const SummaryMortgageCard: React.FC<summaryProps> = ({ data }) => {
 	return (

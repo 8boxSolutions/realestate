@@ -5,12 +5,12 @@ import { Separator } from '../ui/separator';
 import MortgageCalculatorForm from './MortgageCalculatorForm';
 
 interface mortgageCalculatorProps {
-	deposit: number;
-	setDeposit: (value: number) => void;
-	loanTerm: number;
-	setLoanTerm: (value: number) => void;
-	interestRate: number;
-	setInterestRate: (value: number) => void;
+	deposit?: number;
+	setDeposit?: (value: number) => void;
+	loanTerm?: number;
+	setLoanTerm?: (value: number) => void;
+	interestRate?: number;
+	setInterestRate?: (value: number) => void;
 }
 
 const MortgageCalculatorCard: React.FC<mortgageCalculatorProps> = ({
@@ -40,15 +40,15 @@ const MortgageCalculatorCard: React.FC<mortgageCalculatorProps> = ({
 						<label className="mb-2 block text-base font-bold text-[#3F3E5E] sm:text-lg">Deposit</label>
 						<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-10">
 							<Slider
-								value={[deposit]}
+								value={[deposit ?? 0]}
 								min={0}
 								max={100}
 								step={1}
-								onValueChange={(value) => setDeposit(value[0])}
+								onValueChange={(value) => setDeposit?.(value[0])}
 								className="flex-1"
 							/>
 							<div className="w-20 rounded-md bg-gray-100 py-1 text-center text-sm font-medium sm:text-base">
-								{deposit} %
+								{deposit ?? 0} %
 							</div>
 						</div>
 
@@ -58,15 +58,15 @@ const MortgageCalculatorCard: React.FC<mortgageCalculatorProps> = ({
 						<label className="mb-2 block text-base font-bold text-[#3F3E5E] sm:text-lg">Loan Term (years)</label>
 						<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-10">
 							<Slider
-								value={[loanTerm]}
+								value={[loanTerm ?? 0]}
 								min={0}
 								max={100}
 								step={1}
-								onValueChange={(value) => setLoanTerm(value[0])}
+								onValueChange={(value) => setLoanTerm?.(value[0])}
 								className="flex-1"
 							/>
 							<div className="w-20 rounded-md bg-gray-100 py-1 text-center text-sm font-medium sm:text-base">
-								{loanTerm} yrs
+								{loanTerm ?? 0} yrs
 							</div>
 						</div>
 
@@ -74,15 +74,15 @@ const MortgageCalculatorCard: React.FC<mortgageCalculatorProps> = ({
 						<label className="mt-8 mb-2 block text-base font-bold text-[#3F3E5E] sm:text-lg">Interest Rate</label>
 						<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-10">
 							<Slider
-								value={[interestRate]}
+								value={[interestRate ?? 0]}
 								min={0}
 								max={100}
 								step={1}
-								onValueChange={(value) => setInterestRate(value[0])}
+								onValueChange={(value) => setInterestRate?.(value[0])}
 								className="flex-1"
 							/>
 							<div className="w-20 rounded-md bg-gray-100 py-1 text-center text-sm font-medium sm:text-base">
-								{interestRate} %
+								{interestRate ?? 0} %
 							</div>
 						</div>
 					</div>
