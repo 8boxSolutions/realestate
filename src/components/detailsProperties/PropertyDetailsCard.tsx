@@ -11,6 +11,8 @@ import AmenitiesSection from './AmenitiesSection';
 import AvailableUnit from './AvailableUnit';
 import Location from './Location';
 import Faq from './Faq';
+import MortgageCalculatorDashboard from '../mortgage/MortgageCalculatorDashboard';
+import { summaryData, type summaryStats } from '@/constants/summaryAnalysisData';
 
 type AmenityIcons = {
 	totalArea?: string;
@@ -30,8 +32,29 @@ type props = {
 	icons?: AmenityIcons;
 	showAvailable?: boolean;
 	type?: string;
+	showMortgageCalculator?: boolean;
+	deposit?: number;
+	setDeposit?: (value: number) => void;
+	loanTerm?: number;
+	setLoanTerm?: (value: number) => void;
+	interestRate?: number;
+	setInterestRate?: (value: number) => void;
+	data?: summaryStats[];
 };
-const PropertiesDetailsCard: React.FC<props> = ({ dataDetails, breadCrumb, icons, showAvailable, type }) => {
+const PropertiesDetailsCard: React.FC<props> = ({
+	dataDetails,
+	breadCrumb,
+	icons,
+	showAvailable,
+	type,
+	showMortgageCalculator,
+	deposit,
+	setDeposit,
+	loanTerm,
+	setLoanTerm,
+	interestRate,
+	setInterestRate,
+}) => {
 	const navigate = useNavigate();
 	return (
 		<section className="w-full p-10">
@@ -64,6 +87,18 @@ const PropertiesDetailsCard: React.FC<props> = ({ dataDetails, breadCrumb, icons
 				</div>
 				<ContactAgent />
 			</div>
+			{showMortgageCalculator && (
+				<MortgageCalculatorDashboard
+					deposit={deposit}
+					setDeposit={setDeposit}
+					loanTerm={loanTerm}
+					setLoanTerm={setLoanTerm}
+					interestRate={interestRate}
+					setInterestRate={setInterestRate}
+					data={summaryData}
+				/>
+			)}
+
 			{showAvailable && <AvailableUnit />}
 
 			<Location />

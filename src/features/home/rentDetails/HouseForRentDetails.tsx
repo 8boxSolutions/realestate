@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
 import PropertiesDetailsCard from '@/components/detailsProperties/PropertyDetailsCard';
-import { houseProperties } from '@/constants/buyPropertiesDetails';
+import { houseProperties } from '@/constants/PropertiesDetailsData';
 
 // ICON
 import area from '@/assets/imgs/area.svg';

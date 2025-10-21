@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { commercialProperties } from '@/constants/buyPropertiesDetails';
+import { commercialProperties } from '@/constants/PropertiesDetailsData';
 import PropertiesDetailsCard from '@/components/detailsProperties/PropertyDetailsCard';
 
 // ICON

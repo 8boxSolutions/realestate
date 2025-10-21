@@ -9,6 +9,9 @@ import condoImg1 from '@/assets/condo/condo-img.png';
 import condoImg2 from '@/assets/condo/img3.png';
 import lotImg1 from '@/assets/lots/lot-img.png';
 import lotImg2 from '@/assets/lots/img-5.png';
+import developmentImg from '@/assets/newdevelopments/img.png';
+import foreclosureImg1 from '@/assets/foreclosures/foreclosure-img.png';
+import foreclosureImg2 from '@/assets/foreclosures/img1.png';
 
 import { Details } from './propertyDetails';
 
@@ -23,6 +26,42 @@ const baseProperty = {
 	wifi: true,
 	cableTV: true,
 };
+
+//  DEVELOPMENT
+const baseDevelopment = {
+	title: 'Sample House For Sale',
+	price: 10000000,
+	location: 'Quezon City, Manila 1234',
+	sqt: 10000,
+	image: [developmentImg, houseImg2, developmentImg],
+	description:
+		'Lorem ipsum dolor sit amet consectetur. Morbi quis habitant donec aliquet interdum. Massa bibendum tellus sed ultricies. Fermentum pharetra in lorem eget. Et imperdiet sed ultrices pulvinar ultrices enim. Duis fames neque pulvinar in feugiat gravida in. Diam adipiscing sed viverra mauris in lacus. Turpis dignissim tincidunt dui urna suspendisse elit consequat purus enim. Morbi mauris nunc sit aliquet. Nec aliquam consequat nulla accumsan enim ac ullamcorper. Ut pellentesque lectus auctor aenean urna. Lectus vestibulum sit et cursus volutpat dui commodo erat est. Elit leo consectetur amet mattis eget nec. Elit commodo aliquam est at vitae porttitor porta commodo. Senectus rhoncus orci quis risus eget massa. Id urna volutpat vulputate neque porttitor nec sit tempor porta. Pharetra netus enim vel nibh. Enim pharetra purus neque in blandit quis turpis nullam integer.',
+	property: [baseProperty],
+	place: 'MANILA',
+};
+
+export const developmentProperties: Details[] = Array.from({ length: 6 }, (_, i) => ({
+	...baseDevelopment,
+	id: `${i + 1}-development`,
+}));
+
+// FORECLOSURE
+const baseForeclosure = {
+	title: 'Sample House For Sale',
+	price: 10000000,
+	location: 'Quezon City, Manila 1234',
+	sqt: 10000,
+	image: [foreclosureImg1, houseImg2, foreclosureImg2],
+	description:
+		'Lorem ipsum dolor sit amet consectetur. Morbi quis habitant donec aliquet interdum. Massa bibendum tellus sed ultricies. Fermentum pharetra in lorem eget. Et imperdiet sed ultrices pulvinar ultrices enim. Duis fames neque pulvinar in feugiat gravida in. Diam adipiscing sed viverra mauris in lacus. Turpis dignissim tincidunt dui urna suspendisse elit consequat purus enim. Morbi mauris nunc sit aliquet. Nec aliquam consequat nulla accumsan enim ac ullamcorper. Ut pellentesque lectus auctor aenean urna. Lectus vestibulum sit et cursus volutpat dui commodo erat est. Elit leo consectetur amet mattis eget nec. Elit commodo aliquam est at vitae porttitor porta commodo. Senectus rhoncus orci quis risus eget massa. Id urna volutpat vulputate neque porttitor nec sit tempor porta. Pharetra netus enim vel nibh. Enim pharetra purus neque in blandit quis turpis nullam integer.',
+	property: [baseProperty],
+	place: 'MANILA',
+};
+
+export const foreclosureProperties: Details[] = Array.from({ length: 6 }, (_, i) => ({
+	...baseForeclosure,
+	id: `${i + 1}-foreclosures`,
+}));
 
 const baseHouse = {
 	title: 'Sample House For Sale',

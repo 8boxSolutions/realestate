@@ -2,7 +2,7 @@ import { ResponsiveContainer, RadialBarChart, RadialBar, PolarAngleAxis } from '
 import type { summaryStats } from '@/constants/summaryAnalysisData';
 
 interface summaryProps {
-	data: summaryStats[];
+	data?: summaryStats[];
 }
 
 const AnalyticsSummary: React.FC<summaryProps> = ({ data }) => {
@@ -39,7 +39,7 @@ const AnalyticsSummary: React.FC<summaryProps> = ({ data }) => {
 			{/* Legend */}
 
 			<div className="grid grid-cols-1 gap-5 pl-5 sm:grid-cols-2 md:pl-10 lg:gap-2 xl:gap-10">
-				{data.map((item, index) => (
+				{data?.map((item, index) => (
 					<div key={index} className="flex items-center gap-2">
 						<span className="h-3 w-3 rounded-full" style={{ backgroundColor: item.fill }}></span>
 						<p className="text-sm text-gray-300 sm:text-base">{item.name}</p>

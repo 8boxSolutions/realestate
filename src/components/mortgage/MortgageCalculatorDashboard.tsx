@@ -4,13 +4,13 @@ import SummaryMortgageCard from './SummaryMortgageCard';
 import type { summaryStats } from '@/constants/summaryAnalysisData';
 
 interface mortgageProps {
-	deposit: number;
-	setDeposit: (value: number) => void;
-	loanTerm: number;
-	setLoanTerm: (value: number) => void;
-	interestRate: number;
-	setInterestRate: (value: number) => void;
-	data: summaryStats[];
+	deposit?: number;
+	setDeposit?: (value: number) => void;
+	loanTerm?: number;
+	setLoanTerm?: (value: number) => void;
+	interestRate?: number;
+	setInterestRate?: (value: number) => void;
+	data?: summaryStats[];
 }
 const MortgageCalculatorDashboard: React.FC<mortgageProps> = ({
 	deposit,

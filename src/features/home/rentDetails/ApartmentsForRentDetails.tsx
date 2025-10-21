@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
 import PropertiesDetailsCard from '@/components/detailsProperties/PropertyDetailsCard';
-import { apartmantProperties } from '@/constants/buyPropertiesDetails';
+import { apartmantProperties } from '@/constants/PropertiesDetailsData';
 
 import area from '@/assets/imgs/area.svg';
 import beds from '@/assets/imgs/beds.svg';
