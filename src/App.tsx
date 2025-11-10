@@ -1,5 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WebLayout from './layouts/WebLayout';
+// AUTH
+import ClientLogin from './pages/auth/Client/ClientLogin';
+import SignUp from './pages/auth/Client/SignUp';
+import ForgetPassword from './pages/auth/Client/ForgetPassword';
+import VerifyCode from './pages/auth/Client/VerifyCode';
+import SetPassword from './pages/auth/Client/SetPassword';
+import PropertyLogin from './pages/auth/property-owner/PropertyLogin';
+import PropertyRegister from './pages/auth/property-owner/PropertyRegister';
 // FOR SALE
 import { BuyHouseAndLot, Home } from '@/pages';
 import CondoForSale from './pages/buy/CondoForSale';
@@ -47,8 +55,16 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
+				<Route path="/login-client" element={<ClientLogin />} />
+				<Route path="/sign-up" element={<SignUp />} />
+				<Route path="/forget-password" element={<ForgetPassword />} />
+				<Route path="/verify-code" element={<VerifyCode />} />
+				<Route path="/set-password" element={<SetPassword />} />
+				<Route path="/login-property" element={<PropertyLogin />} />
+				<Route path="/property-register" element={<PropertyRegister />} />
 				<Route element={<WebLayout />}>
 					<Route path="/" element={<Home />} />
+
 					{/* BUY */}
 					<Route path="/house-and-lot/buy" element={<BuyHouseAndLot />} />
 					<Route path="/house-and-lot/buy/:houseId" element={<HouseForSaleDetails />} />

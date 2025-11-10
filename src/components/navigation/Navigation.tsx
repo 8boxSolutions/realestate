@@ -53,7 +53,9 @@ const Navigation = () => {
 					const isActive = currentPath === href;
 
 					if (dropdown) {
-						return <NavDropDown key={label} label={label} items={dropdownData[dropdown]} active={isActive} />;
+						return (
+							<NavDropDown key={label} label={label} items={dropdownData[dropdown]} active={isActive} rounded="lg" />
+						);
 					}
 
 					return (
