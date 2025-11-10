@@ -1,4 +1,3 @@
-import React from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const maxCapAndFaci = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
