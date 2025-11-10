@@ -13,14 +13,21 @@ interface NavDropDownProps {
 	items: { label: string; href: string }[];
 	active?: boolean;
 }
-const NavDropDown: React.FC<NavDropDownProps> = ({ label, items, active }) => {
+interface NavDropDownProps {
+	label: string;
+	items: { label: string; href: string }[];
+	active?: boolean;
+	rounded?: 'lg' | 'full';
+}
+
+const NavDropDown: React.FC<NavDropDownProps> = ({ label, items, active, rounded = 'lg' }) => {
 	return (
 		<div>
 			<DropdownMenu>
 				<DropdownMenuTrigger
-					className={`rounded-lg p-2 hover:bg-primary hover:text-white ${
+					className={`p-2 transition-all duration-300 ease-in-out hover:bg-primary hover:text-white ${
 						active ? 'bg-primary text-white' : 'text-black'
-					}`}
+					} ${rounded === 'full' ? 'rounded-full p-3' : 'rounded-lg'}`}
 				>
 					{label}
 				</DropdownMenuTrigger>
