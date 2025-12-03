@@ -5,6 +5,7 @@ import CreateAccountStep from './create-account/CreateAccountStep';
 import BusinessInfoStep from './business-info/BusinessInfoStep';
 import OwnershipCompliance from './ownership-compliance/OwnershipCompliance';
 import PropertyListingDetails from './property-details/PropertyListingDetails';
+import PaymentAndPricingDetail from './payment-and-pricing/PaymentAndPricingDetail';
 
 const steps = [
 	{
@@ -23,7 +24,7 @@ const steps = [
 			'House Rules (For Rent)',
 		],
 	},
-	{ title: 'Payment and Pricing', substeps: ['Pricing Setup', 'Discounts', 'Security Deposit', 'Payment Method'] },
+	{ title: 'Payment and Pricing', substeps: ['Pricing', 'Discounts', 'Security Deposit', 'Payment Method'] },
 	{ title: 'Final Review and Verification' },
 ];
 
@@ -98,6 +99,7 @@ const PropertyRegister = () => {
 				{currentStep === 1 && <BusinessInfoStep />}
 				{currentStep === 2 && <OwnershipCompliance />}
 				{currentStep === 3 && <PropertyListingDetails currentSubStep={currentSubstep} />}
+				{currentStep === 4 && <PaymentAndPricingDetail currentSubStep={currentSubstep} />}
 
 				{/* Navigation Buttons */}
 				<div className="flex h-full justify-between py-20">
