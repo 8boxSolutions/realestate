@@ -33,15 +33,19 @@ const PropertyRegister = () => {
 	const [currentSubstep, setCurrentSubstep] = useState<number>(0);
 
 	const handleNext = () => {
-		if (steps[currentStep].substeps) {
-			if (currentSubstep < steps[currentStep].substeps.length - 1) {
-				setCurrentSubstep((prev) => prev + 1);
-				return;
-			}
-		}
-		setCurrentStep((prev) => prev + 1);
-		setCurrentSubstep(0);
-	};
+    // 1. Add this line at the very start
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // The rest of your existing logic
+    if (steps[currentStep].substeps) {
+        if (currentSubstep < steps[currentStep].substeps.length - 1) {
+            setCurrentSubstep((prev) => prev + 1);
+            return;
+        }
+    }
+    setCurrentStep((prev) => prev + 1);
+    setCurrentSubstep(0);
+};
 
 	const handlePrevious = () => {
 		if (steps[currentStep].substeps && currentSubstep > 0) {
