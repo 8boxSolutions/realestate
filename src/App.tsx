@@ -8,6 +8,10 @@ import VerifyCode from './pages/auth/Client/VerifyCode';
 import SetPassword from './pages/auth/Client/SetPassword';
 import PropertyLogin from './pages/auth/property-owner/PropertyLogin';
 import PropertyRegister from './pages/auth/property-owner/PropertyRegister';
+import PropertyForPass from './pages/auth/property-owner/PropertyForPass';
+import PropertyVerifyCode from './pages/auth/property-owner/PropertyVerifyCode';
+import PropertySetPassword from './pages/auth/property-owner/PropertySetPassword';
+
 // FOR SALE
 import { BuyHouseAndLot, Home } from '@/pages';
 import CondoForSale from './pages/buy/CondoForSale';
@@ -50,6 +54,8 @@ import LotForRentDetails from './features/home/buyDetails/LotForSaleDetails';
 
 import NewDevelopmentsDetails from './features/home/NewDevelopmentsDetails';
 import ForeclosuresDetails from './features/home/ForeclosuresDetails';
+import { fromTheme } from 'tailwind-merge';
+
 
 function App() {
 	return (
@@ -61,7 +67,10 @@ function App() {
 				<Route path="/verify-code" element={<VerifyCode />} />
 				<Route path="/set-password" element={<SetPassword />} />
 				<Route path="/login-property" element={<PropertyLogin />} />
+				<Route path="/property-for-pass" element={<PropertyForPass />} />
 				<Route path="/property-register" element={<PropertyRegister />} />
+				<Route path="/property-set-password" element={<PropertySetPassword />} />
+				<Route path="/property-verify-code" element={<PropertyVerifyCode />} />
 				<Route element={<WebLayout />}>
 					<Route path="/" element={<Home />} />
 

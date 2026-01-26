@@ -39,6 +39,7 @@ const Amenities = () => {
 									</div>
 								))}
 							</div>
+							
 							<Separator className="!w-lg" />
 
 							{/* short red line */}

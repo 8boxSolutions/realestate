@@ -89,7 +89,7 @@ const PropertyLogin = () => {
 						</Label>
 					</div>
 					<a
-						onClick={() => navigate('/forget-password')}
+						onClick={() => navigate('/property-for-pass')}
 						className="cursor-pointer text-sm text-primary underline sm:text-base"
 					>
 						Forget Password
