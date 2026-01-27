@@ -16,6 +16,9 @@ import PropertySetPassword from './pages/auth/property-owner/PropertySetPassword
 import PropertyLayout from './layouts/Property_Layout';
 import PropertyHome from './pages/property-pages/property-home';
 import PropertyMessages from './pages/property-pages/property-messages';
+import PropertyLeadsTransactions from './pages/property-pages/property-leads-transactions';
+import PropertyListings from './pages/property-pages/property-listings';
+import PropertyPerformance from './pages/property-pages/property-performance';
 
 // FOR SALE
 import { BuyHouseAndLot, Home } from '@/pages';
@@ -131,9 +134,9 @@ function App() {
 				<Route element={<PropertyLayout />}>
 					<Route path="/property-home" element={<PropertyHome />} />
 					<Route path="/property-messages" element={<PropertyMessages />} />
-					<Route path="/property-leads-transactions" element={<div>Property Leads & Transactions Page</div>} />
-					<Route path="/property-listings" element={<div>Property Listings Page</div>} />
-					<Route path="/property-performance" element={<div>Property Performance Page</div>} />
+					<Route path="/property-leads-transactions" element={<PropertyLeadsTransactions />} />
+					<Route path="/property-listings" element={<PropertyListings />} />
+					<Route path="/property-performance" element={<PropertyPerformance />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

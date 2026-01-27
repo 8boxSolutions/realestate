@@ -24,6 +24,7 @@ const PropertyHeader: React.FC = () => {
                 <HeaderWrapper className="flex items-center justify-between">
                     <LogoLink />
                     <PropertyNavigation />
+                    <LogoLink />
                 </HeaderWrapper>
             </div>
         </>
