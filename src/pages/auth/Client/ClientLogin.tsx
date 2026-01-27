@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -99,7 +98,12 @@ const ClientLogin = () => {
 
 				{/* BUTTON LOGIN + SIGNUP */}
 				<div className="space-y-5 pt-8 sm:pt-10">
-					<Button className="w-full py-2.5 text-sm sm:py-3 sm:text-base">Login</Button>
+					<a 
+						onClick={() => navigate('/client-home')} 
+						className="block w-full py-2.5 text-sm sm:py-3 sm:text-base bg-[#FF0000] text-white font-semibold rounded text-center cursor-pointer hover:bg-red-700 transition-colors"
+					>
+						Login
+					</a>
 					<div className="flex flex-wrap justify-center gap-1 text-sm sm:text-base">
 						<p>Don’t have an account?</p>
 						<a onClick={() => navigate('/sign-up')} className="cursor-pointer text-primary underline">
