@@ -1,4 +1,5 @@
 import LogoLink from "@/components/LogoLink";
+import PropertyNavigation from "@/components/navigation/Property-Navigation";
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
@@ -22,6 +23,7 @@ const PropertyHeader: React.FC = () => {
                 
                 <HeaderWrapper className="flex items-center justify-between">
                     <LogoLink />
+                    <PropertyNavigation />
                 </HeaderWrapper>
             </div>
         </>

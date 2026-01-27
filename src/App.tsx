@@ -14,7 +14,8 @@ import PropertySetPassword from './pages/auth/property-owner/PropertySetPassword
 
 // PROPERTY-PAGES
 import PropertyLayout from './layouts/Property_Layout';
-import PropertyHome from './pages/property-pages/property-home/property-home';
+import PropertyHome from './pages/property-pages/property-home';
+import PropertyMessages from './pages/property-pages/property-messages';
 
 // FOR SALE
 import { BuyHouseAndLot, Home } from '@/pages';
@@ -126,8 +127,13 @@ function App() {
 					<Route path="/favorite" element={<FavoriteSection />} />
 				</Route>
 				
-				<Route path="/property-home" element={<PropertyLayout />}>
-					<Route index element={<PropertyHome />} />
+				{/* PROPERTY-OWNER */}
+				<Route element={<PropertyLayout />}>
+					<Route path="/property-home" element={<PropertyHome />} />
+					<Route path="/property-messages" element={<PropertyMessages />} />
+					<Route path="/property-leads-transactions" element={<div>Property Leads & Transactions Page</div>} />
+					<Route path="/property-listings" element={<div>Property Listings Page</div>} />
+					<Route path="/property-performance" element={<div>Property Performance Page</div>} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

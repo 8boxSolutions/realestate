@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import PropertyHeader from '@/pages/property-pages/property-header';
+import PropertyHeader from '@/components/PropertyHeader';
 
 const PropertyLayout = () => {
 	return (
