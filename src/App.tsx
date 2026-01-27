@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import WebLayout from './layouts/WebLayout';
+import { UserProvider } from './context/UserProvider';
 // AUTH
 import ClientLogin from './pages/auth/Client/ClientLogin';
 import SignUp from './pages/auth/Client/SignUp';
@@ -64,9 +65,16 @@ import NewDevelopmentsDetails from './features/home/NewDevelopmentsDetails';
 import ForeclosuresDetails from './features/home/ForeclosuresDetails';
 import { fromTheme } from 'tailwind-merge';
 
+import ClientFavorites from './pages/client/ClientFavorites';
+import Profile from './pages/client/Profile';
+import ClientHome from './pages/client/ClientHome';
+import ClientMessages from './pages/client/ClientMessages';
+import ClientTransactions from './pages/client/ClientTransactions';
+import ClientLayout from './layouts/ClientLayout';
 
 function App() {
 	return (
+    <UserProvider>
 		<BrowserRouter>
 			<Routes>
 				<Route path="/login-client" element={<ClientLogin />} />
@@ -129,6 +137,15 @@ function App() {
 					<Route path="/property-guides" element={<PropertyGuidelines />} />
 					<Route path="/favorite" element={<FavoriteSection />} />
 				</Route>
+
+        {/* CLIENT LAYOUT */}
+         <Route element={<ClientLayout />}>
+           <Route path="/client-home" element={<ClientHome />} />
+           <Route path="/client-messages" element={<ClientMessages />} />
+           <Route path="/client-transaction" element={<ClientTransactions />} />
+           <Route path="/client-favorite" element={<ClientFavorites />} />
+           <Route path="/profile" element={<Profile />} />
+         </Route>
 				
 				{/* PROPERTY-OWNER */}
 				<Route element={<PropertyLayout />}>
@@ -140,6 +157,7 @@ function App() {
 				</Route>
 			</Routes>
 		</BrowserRouter>
+    </UserProvider>
 	);
 }
 
