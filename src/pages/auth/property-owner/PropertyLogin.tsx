@@ -98,7 +98,11 @@ const PropertyLogin = () => {
 
 				{/* BUTTON LOGIN + SIGNUP */}
 				<div className="space-y-5 pt-8 sm:pt-10">
-					<Button className="w-full py-2.5 text-sm sm:py-3 sm:text-base">Login</Button>
+					<Button 
+						className="w-full py-2.5 text-sm sm:py-3 sm:text-base"
+						onClick={() => navigate('/property-home')}>Login
+					</Button>
+
 					<div className="flex flex-wrap justify-center gap-1 text-sm sm:text-base">
 						<p>Don’t have an account?</p>
 						<a

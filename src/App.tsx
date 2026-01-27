@@ -12,6 +12,10 @@ import PropertyForPass from './pages/auth/property-owner/PropertyForPass';
 import PropertyVerifyCode from './pages/auth/property-owner/PropertyVerifyCode';
 import PropertySetPassword from './pages/auth/property-owner/PropertySetPassword';
 
+// PROPERTY-PAGES
+import PropertyLayout from './layouts/Property_Layout';
+import PropertyHome from './pages/property-pages/property-home/property-home';
+
 // FOR SALE
 import { BuyHouseAndLot, Home } from '@/pages';
 import CondoForSale from './pages/buy/CondoForSale';
@@ -106,16 +110,24 @@ function App() {
 					<Route path="/commercial-unit-for-rent/:commercialId" element={<CommercialForRentDetails />} />
 
 					<Route path="/all-properties-for-rent" element={<AllPropertiesForRent />} />
-
+					
+					{/* NEW DEVELOPMENTS */}
 					<Route path="/new-developments" element={<NewDevelopmentsSection />} />
 					<Route path="/new-developments/:developmentId" element={<NewDevelopmentsDetails />} />
+
+					{/* FORECLOSURES */}
 					<Route path="/foreclosures" element={<ForeclosuresSection />} />
 					<Route path="/foreclosures/:foreclosureId" element={<ForeclosuresDetails />} />
+
 					{/* RESOURCES */}
 					<Route path="/journal" element={<Journal />} />
 					<Route path="/loan-calculator" element={<LoanCalculator />} />
 					<Route path="/property-guides" element={<PropertyGuidelines />} />
 					<Route path="/favorite" element={<FavoriteSection />} />
+				</Route>
+				
+				<Route path="/property-home" element={<PropertyLayout />}>
+					<Route index element={<PropertyHome />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
