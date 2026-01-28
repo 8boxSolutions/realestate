@@ -2,9 +2,9 @@
 function PropertyGreetings() {
     return (
         <div>
-            <h1 className="text-center text-4xl font-bold px-5">Good Afternoon, John</h1>
+            <h1 className="text-center text-3xl font-bold px-5">Good Afternoon, John</h1>
             <div className="px-5 py-4">   
-                <div className="mt-3 space-y-2 text-lg px-10">
+                <div className="mt-3 space-y-2 text-l px-10">
                     <div className="inline-flex justify-between w-full">
                         <p>Property Value Estimate:</p>
                         <p>P99999.00</p>

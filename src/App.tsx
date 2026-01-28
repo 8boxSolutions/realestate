@@ -65,6 +65,7 @@ import NewDevelopmentsDetails from './features/home/NewDevelopmentsDetails';
 import ForeclosuresDetails from './features/home/ForeclosuresDetails';
 import { fromTheme } from 'tailwind-merge';
 
+// CLIENT-PAGES
 import ClientFavorites from './pages/client/ClientFavorites';
 import Profile from './pages/client/Profile';
 import ClientHome from './pages/client/ClientHome';
@@ -138,14 +139,14 @@ function App() {
 					<Route path="/favorite" element={<FavoriteSection />} />
 				</Route>
 
-        {/* CLIENT LAYOUT */}
-         <Route element={<ClientLayout />}>
-           <Route path="/client-home" element={<ClientHome />} />
-           <Route path="/client-messages" element={<ClientMessages />} />
-           <Route path="/client-transaction" element={<ClientTransactions />} />
-           <Route path="/client-favorite" element={<ClientFavorites />} />
-           <Route path="/profile" element={<Profile />} />
-         </Route>
+				{/* CLIENT LAYOUT */}
+				<Route element={<ClientLayout />}>
+					<Route path="/client-home" element={<ClientHome />} />
+					<Route path="/client-messages" element={<ClientMessages />} />
+					<Route path="/client-transaction" element={<ClientTransactions />} />
+					<Route path="/client-favorite" element={<ClientFavorites />} />
+					<Route path="/profile" element={<Profile />} />
+				</Route>
 				
 				{/* PROPERTY-OWNER */}
 				<Route element={<PropertyLayout />}>

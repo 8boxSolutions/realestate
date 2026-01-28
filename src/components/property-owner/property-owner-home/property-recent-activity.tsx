@@ -4,7 +4,7 @@ function PropertyRecentActivity() {
         <div>
             <h1 className="text-left text-2xl pl-13 pt-6">Recent Activity</h1>
             <p className="text-left text-l pl-13 text-red-500 py-2 font-medium">99.46 Offer Acceptance Rate</p>
-            <div className="px-13">
+            <div className="px-13 text-sm">
                 <div className="inline-flex justify-between w-full">
                     <p className="font-bold">Inquiry Received</p>
                     <p className="text-right">Juan Dela Cruz</p>

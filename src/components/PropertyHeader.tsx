@@ -22,7 +22,7 @@ const PropertyHeader: React.FC = () => {
         <>
             <div className="z-50 p-10">
                 
-                <HeaderWrapper className="flex items-center justify-between">
+                <HeaderWrapper className="flex items-center justify-between px-20">
                     <LogoLink />
                     <PropertyNavigation />
                     <Bell className="h-6 w-6 text-muted-foreground" />  

@@ -10,14 +10,14 @@ function PropertyCalendar() {
     <>
       <div className="inline-flex justify-between w-full items-center px-13 pt-5">
         <h1 className="text-left text-2xl">Calendar</h1>
-        <p className="text-red-500 cursor-pointer">View All</p>
+        <p className="text-red-500 cursor-pointer font-bold text-xs">View All</p>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center mx-13">
         <Calendar
           mode="single"
           selected={date}
           onSelect={setDate}
-          className="rounded-md border w-100 mb-10"
+          className="rounded-md border w-full"
           captionLayout="dropdown"
         />
       </div>
