@@ -1,5 +1,6 @@
 import PropertyAllMessage from "@/components/property-owner/property-owner-messages/property-all-message";
 import PropertyChat from "@/components/property-owner/property-owner-messages/property-chat";
+import PropertyMiddle from "@/components/property-owner/property-owner-messages/property-middle";
 import PropertyOtherChat from "@/components/property-owner/property-owner-messages/property-other-chat";
 
 const PropertyMessages = () => {
@@ -22,13 +23,14 @@ const PropertyMessages = () => {
                 </div>
 
                 {/* Middle */}
-                <div className="relative w-full lg:w-4/10 bg-gray-500 h-full">
-
+                <div className="relative w-full lg:w-4/10 bg-gray-100 h-full">
+                    {/* Chat Middle */}
+                    <PropertyMiddle />
                 </div>
 
-                {/* Middle */}
+                {/* Right Side */}
                 <div className="relative w-full lg:w-3/10 h-full">
-        
+
                 </div>
             </div>
         </>
