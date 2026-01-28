@@ -2,7 +2,7 @@
 function PropertyNotification() {
     return (
         <div>
-            <div className="px-13 pt-5">
+            <div className="px-13 pt-10">
                 <div className="inline-flex justify-between w-full items-center">
                     <h1 className="text-2xl">Notifications</h1>
                     <p className="text-red-500 cursor-pointer font-bold text-xs">View All</p>

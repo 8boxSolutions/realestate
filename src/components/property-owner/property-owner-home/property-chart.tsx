@@ -7,16 +7,16 @@ import {
 } from "@/components/ui/chart"
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 const chartData = [
-  { month: "September", desktop: 186, mobile: 80 },
-  { month: "October", desktop: 305, mobile: 200 },
-  { month: "November", desktop: 237, mobile: 120 },
-  { month: "December", desktop: 73, mobile: 190 },
-  { month: "January", desktop: 209, mobile: 130 },
-  { month: "February", desktop: 214, mobile: 140 },
+  { month: "September", desktop: 186},
+  { month: "October", desktop: 305},
+  { month: "November", desktop: 237},
+  { month: "December", desktop: 73},
+  { month: "January", desktop: 209},
+  { month: "February", desktop: 214},
 ]
 const chartConfig = {
   desktop: {
-    label: "Desktop",
+    label: "Earnings",
     color: "#2563eb",
   },
 } satisfies ChartConfig

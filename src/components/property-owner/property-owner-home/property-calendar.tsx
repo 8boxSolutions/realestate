@@ -8,7 +8,7 @@ function PropertyCalendar() {
 
   return (
     <>
-      <div className="inline-flex justify-between w-full items-center px-13 pt-5">
+      <div className="inline-flex justify-between w-full items-center px-13 pt-10">
         <h1 className="text-left text-2xl">Calendar</h1>
         <p className="text-red-500 cursor-pointer font-bold text-xs">View All</p>
       </div>

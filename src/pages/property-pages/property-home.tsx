@@ -1,5 +1,6 @@
 import PropertyCalendar from "@/components/property-owner/property-owner-home/property-calendar";
 import PropertyCard from "@/components/property-owner/property-owner-home/property-card";
+import PropertyDiscover from "@/components/property-owner/property-owner-home/property-discover";
 import PropertyGreetings from "@/components/property-owner/property-owner-home/property-greetings";
 import PropertyNotification from "@/components/property-owner/property-owner-home/property-notification";
 import PropertyPerformanceReview from "@/components/property-owner/property-owner-home/property-performance-review";
@@ -27,6 +28,8 @@ const PropertyHome: React.FC = () => {
                     <PropertyCard />
                     {/* Performance Review */}
                     <PropertyPerformanceReview />
+                    {/* Discover */}
+                    <PropertyDiscover />
                 </div>
             </div>
         </>
