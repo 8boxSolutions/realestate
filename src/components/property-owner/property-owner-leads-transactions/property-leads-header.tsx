@@ -7,7 +7,7 @@ function PropertyLeadsHeader() {
                     <h1 className="text-3xl font-bold">Leads & Transactions</h1>
                 </div>
                 <div className="w-full lg:w-7/10">
-                    <div className="inline-flex gap-3 px-3">
+                    <div className="inline-flex gap-3 px-3 mt-5">
                         <div className="bg-red-300 w-fit py-3 px-5 rounded-2xl cursor-pointer hover:bg-red-300 hover:text-red-600">
                             <p className="text-sm font-bold text-red-600">All</p>
                         </div>
