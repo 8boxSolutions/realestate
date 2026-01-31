@@ -1,6 +1,11 @@
+import PropertyListingHeader from "@/components/property-owner/property-owner-listing/property-listing-header";
 
-const PropertyListings = () => {
-    return <div>Property Listings Page</div>;
+const PropertyListings: React.FC = () => {
+    return ( 
+        <>
+            <PropertyListingHeader />
+        </>
+    );
 }   
 
 export default PropertyListings;
