@@ -1,4 +1,6 @@
 import PropertyPerformanceLeft from "@/components/property-owner/property-owner-performance/property-performance-left";
+import PropertyPerformanceMiddleHeader from "@/components/property-owner/property-owner-performance/property-performance-middle-header";
+import PropertyPerformanceRight from "@/components/property-owner/property-owner-performance/property-performance-right";
 
 const PropertyPerformance = () => {
     return (
@@ -7,11 +9,12 @@ const PropertyPerformance = () => {
                 {/* Left Side */}
                 <PropertyPerformanceLeft />
                 {/* Middle */}
-                <div className="relative w-full lg:w-5/10 bg-gray-100 h-100">
+                <div className="relative w-full lg:w-5/10 bg-gray-50 h-full">
+                    <PropertyPerformanceMiddleHeader />
+                    <h1 className="p-5">You have recieved 125 inquiries this month</h1>
                 </div>
                 {/* Right Side */}
-                <div className="relative w-full lg:w-3/10 h-100 bg-blue-800">
-                </div>
+                <PropertyPerformanceRight />
             </div>
         </>
     )
