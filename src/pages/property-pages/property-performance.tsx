@@ -1,5 +1,7 @@
+import PropertyPerformanceChart from "@/components/property-owner/property-owner-performance/property-performance-chart";
+import PropertyPerformanceHeader from "@/components/property-owner/property-owner-performance/property-performance-header";
 import PropertyPerformanceLeft from "@/components/property-owner/property-owner-performance/property-performance-left";
-import PropertyPerformanceMiddleHeader from "@/components/property-owner/property-owner-performance/property-performance-middle-header";
+import PropertyPerformanceNavigation from "@/components/property-owner/property-owner-performance/property-performance-navigation";
 import PropertyPerformanceRight from "@/components/property-owner/property-owner-performance/property-performance-right";
 
 const PropertyPerformance = () => {
@@ -10,8 +12,9 @@ const PropertyPerformance = () => {
                 <PropertyPerformanceLeft />
                 {/* Middle */}
                 <div className="relative w-full lg:w-5/10 bg-gray-50 h-full">
-                    <PropertyPerformanceMiddleHeader />
-                    <h1 className="p-5">You have recieved 125 inquiries this month</h1>
+                    <PropertyPerformanceNavigation />
+                    <PropertyPerformanceHeader />
+                    <PropertyPerformanceChart />
                 </div>
                 {/* Right Side */}
                 <PropertyPerformanceRight />

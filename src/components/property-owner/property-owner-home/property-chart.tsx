@@ -22,7 +22,7 @@ const chartConfig = {
 } satisfies ChartConfig
 export function PropertyChart() {
   return (
-    <ChartContainer config={chartConfig} className="w-full h-80">
+    <ChartContainer config={chartConfig} className="w-full h-64 sm:h-80 md:h-96">
       <BarChart accessibilityLayer data={chartData}>
         <CartesianGrid vertical={false} />
         <XAxis
