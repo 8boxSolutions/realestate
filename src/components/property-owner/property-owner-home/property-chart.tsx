@@ -20,9 +20,13 @@ const chartConfig = {
     color: "#2563eb",
   },
 } satisfies ChartConfig
-export function PropertyChart() {
+interface PropertyChartProps {
+  className?: string;
+}
+
+export function PropertyChart({ className = "w-full h-64 sm:h-80 md:h-96" }: PropertyChartProps) {
   return (
-    <ChartContainer config={chartConfig} className="w-full h-80">
+    <ChartContainer config={chartConfig} className={className}>
       <BarChart accessibilityLayer data={chartData}>
         <CartesianGrid vertical={false} />
         <XAxis

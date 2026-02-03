@@ -1,5 +1,5 @@
 
-function PropertyPerformanceMiddleHeader() {
+function PropertyPerformanceNavigation() {
     return (
         <>
             <div className="inline-flex w-full justify-between items-center px-3 mt-5">
@@ -26,4 +26,4 @@ function PropertyPerformanceMiddleHeader() {
     )
 }
 
-export default PropertyPerformanceMiddleHeader;
+export default PropertyPerformanceNavigation;
