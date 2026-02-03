@@ -3,7 +3,7 @@ import { PropertyChart } from "../property-owner-home/property-chart";
 function PropertyPerformanceChart() {
     return (
         <>
-            <div className="bg-white mx-5 mt-5 rounded-2xl">
+            <div className="bg-white mx-5 mt-5 rounded-2xl mb-5">
                 <div className="flex flex-col lg:flex-row w-full">
                     {/* Left Side */}
                     <div className="relative w-full lg:w-2/5 m-10">

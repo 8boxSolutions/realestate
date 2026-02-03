@@ -2,7 +2,7 @@
 function PropertyPerformanceHeader() {
     return (
         <>
-            <h1 className="p-5">You have recieved 125 inquiries this month</h1>
+            <h2 className="p-5 font-bold">You have recieved 125 inquiries this month</h2>
             <div className="px-5 inline-flex w-full">
                 <div className="inline-flex justify-start gap-22 w-full">
                     <h1 className="font-bold text-2xl">75.4%</h1>
