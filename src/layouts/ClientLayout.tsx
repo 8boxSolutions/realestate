@@ -1,21 +1,34 @@
-// src/layouts/ClientLayout.tsx
-import { Outlet } from 'react-router-dom';
-import ClientHeader from '@/components/ClientHeader'; // Ensure this path is correct
-import Footer from '@/components/Footer';
+import React from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import ClientHeader from '@/components/ClientHeader'; 
+import Footer from '@/components/Footer'; 
 
 const ClientLayout = () => {
-    return (
-        <div className="flex min-h-screen flex-col">
-            {/* This uses the Client Header */}
-            <ClientHeader /> 
-            
-            <main className="flex-grow">
-                <Outlet />
-            </main>
-        
-            <Footer />
-        </div>
-    );
+  const location = useLocation();
+
+  // Define all paths where the Footer should be HIDDEN
+  const hideFooterPaths = [
+    '/client-transaction', // Hides on Transaction List & Details
+    '/client-messages'     // Hides on Messages
+  ];
+
+  // Check if current path starts with any of the paths above
+  const shouldHideFooter = hideFooterPaths.some(path => 
+    location.pathname.startsWith(path)
+  );
+
+  return (
+    <div className="flex min-h-screen flex-col">
+      <ClientHeader />
+
+      <main className="flex-1">
+        <Outlet />
+      </main>
+
+      {/* Only show Footer if we are NOT on a hidden page */}
+      {!shouldHideFooter && <Footer />}
+    </div>
+  );
 };
 
 export default ClientLayout;
