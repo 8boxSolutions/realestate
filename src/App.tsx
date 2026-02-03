@@ -68,8 +68,8 @@ import { fromTheme } from 'tailwind-merge';
 import ClientFavorites from './pages/client/ClientFavorites';
 import Profile from './pages/client/Profile';
 import ClientHome from './pages/client/ClientHome';
-import ClientMessages from './pages/client/ClientMessages';
-import ClientTransactions from './pages/client/ClientTransactions';
+import ClientMessages from './pages/client/messages/ClientMessages';
+import ClientTransactions from './pages/client/Transactions/ClientTransactions';
 import ClientLayout from './layouts/ClientLayout';
 
 function App() {
